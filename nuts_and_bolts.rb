@@ -5,7 +5,6 @@ require 'stringio'
 
 
 # 20/24 tests pass .01 - .04 mb
-# 20/24 tests pass .01 - .04 mb
 def solve(nuts, bolts)
 	output_array = []
 	nuts.each do |nut|
@@ -22,42 +21,36 @@ def search_array(nut, bolts)
 		return nil
 	end
 
-	left, right = split_array(bolts)
-
-	left_result = lookForNut(nut, left)
-
-	if left_result = lookForNut(nut, left)
-		return left_result
+	if bolts.count == 1
+		right = bolts
 	else
-		# debugger
-		return lookForNut(nut, right)
+		left, right = split_array(bolts)
 	end
 
+	return look_for_item(nut, left, right)
+	return nil
 end
 
-# returns left,right or nil
 def split_array(bolts)
-
-	if bolts.count < 1
-		return nil
-	end
 
 	mid = (bolts.size / 2).round
 	left = bolts.slice(0, mid)
   right = bolts.slice(mid, bolts.size - mid)
 
-	if bolts.count <= 4
-		return left, right
-	end
-
-	
-	return nil
+  return left, right
 end
 
-def lookForNut(nut, bolts)
-	print "searching #{bolts} for #{nut}\n"
-	if bolts && bolts.count >= 1
-		bolts.each do |bolt|
+def look_for_item(nut, left, right)
+	if right && right.count >= 1
+		right.each do |bolt|
+			if nut == bolt
+				return "#{nut} #{bolt}"
+			end
+		end
+	end
+
+	if left && left.count >= 1
+		left.each do |bolt|
 			if nut == bolt
 				return "#{nut} #{bolt}"
 			end
@@ -65,25 +58,6 @@ def lookForNut(nut, bolts)
 	end
 	return nil
 end
-
-# def look_for_item(nut, left, right)
-# 	if right && right.count >= 1
-# 		right.each do |bolt|
-# 			if nut == bolt
-# 				return "#{nut} #{bolt}"
-# 			end
-# 		end
-# 	end
-
-# 	if left && left.count >= 1
-# 		left.each do |bolt|
-# 			if nut == bolt
-# 				return "#{nut} #{bolt}"
-# 			end
-# 		end
-# 	end
-# 	return nil
-# end
 
 nuts = [4, 32, 5, 7, 9, 12, 43, 87]
 bolts = [12, 32, 43, 7, 87, 9, 5, 4]
@@ -199,3 +173,5 @@ print solve(nuts, bolts)
 # nuts = [4, 32, 5, 7]
 # bolts = [32, 7, 5, 4]
 # res = solve(nuts, bolts)
+
+
