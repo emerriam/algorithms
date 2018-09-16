@@ -1,0 +1,404 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"item_value",
+				"item_value"
+			],
+			[
+				"is",
+				"isconnected"
+			],
+			[
+				"bytes",
+				"bytesremaining"
+			],
+			[
+				"leader",
+				"leadership_skill_hstore"
+			],
+			[
+				"find_by",
+				"find_by_abbreviation"
+			],
+			[
+				"Sof",
+				"SoftTranslationE5E9"
+			],
+			[
+				"ema",
+				"old_email"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"update_user_",
+				"update_user_skill_caches"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "qsort.rb",
+			"settings":
+			{
+				"buffer_size": 1135,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls",
+			"help",
+			"bash",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Eric/Github_master/algorithms"
+	],
+	"file_history":
+	[
+		"/Users/Eric/Github_master/spiral_travel/lecture_notes.txt",
+		"/Users/Eric/Github_master/spiral_travel/mergesort.rb",
+		"/Users/Eric/Github_master/spiral_travel/classwork.rb",
+		"/Users/Eric/Github_master/algorithms/qsort.rb",
+		"/Users/Eric/Github_master/spiral_travel/nuts_and_bolts.rb",
+		"/Users/Eric/Github_master/spiral_travel/scrap.rb",
+		"/Users/Eric/Github_master/spiral_travel/heapsort.rb",
+		"/Users/Eric/Github_master/spiral_travel/qsort.rb",
+		"/Users/Eric/Github_master/spiral_travel/untitled.rb",
+		"/Users/Eric/Github_master/spiral_travel/backup.rb",
+		"/Users/Eric/Github_master/spiral_travel/test.txt",
+		"/Users/Eric/Github_master/clover_health/file_parser.rb",
+		"/Users/Eric/Github_master/spiral_travel/README.md",
+		"/Users/Eric/Github_master/spiral_travel/spiral_travel.rb",
+		"/Users/Eric/Github_master/spiral_travel/spiral_travel_ii.rb",
+		"/Users/Eric/Library/Application Support/RimWorld/Saves/HisyouEDIT2.rws",
+		"/Users/Eric/Library/Application Support/RimWorld/Saves/HisyouEDITME.rws",
+		"/Users/Eric/Github_master/clover_health/file_parser_test.rb",
+		"/Users/Eric/Github_master/clover_health/database.rb",
+		"/Users/Eric/Github_master/file_parser/README.md",
+		"/Users/Eric/Github_master/clover_health/README.md",
+		"/Users/Eric/Github_master/clover_health/data/testformat1_2015-06-28.txt",
+		"/Users/Eric/Github_master/clover_health/specs/testformat1.csv",
+		"/Users/Eric/Github_master/bridge/app/policies/employers_controller_policy.rb",
+		"/Users/Eric/Github_master/clover_health/file_parser\nfile_parser_test.rb",
+		"/Users/Eric/Github_master/file_parser/db/seeds.rb",
+		"/Users/Eric/Github_master/file_parser/file_parse.rb",
+		"/Users/Eric/Github_master/walker/leader_board.rb",
+		"/Users/Eric/Github_master/file_parser/your_code.rb",
+		"/Users/Eric/Github_master/file_parser/vet.rb",
+		"/Users/Eric/Github_master/file_parser/test/data_file_test.rb",
+		"/Users/Eric/Github_master/file_parser/config/application.rb",
+		"/Users/Eric/Github_master/file_parser/app/models/example_table.rb",
+		"/Users/Eric/Github_master/file_parser/app/models/application_record.rb",
+		"/Users/Eric/Github_master/file_parser/Gemfile",
+		"/Users/Eric/Github_master/file_parser/file_parser_keep.rb",
+		"/Users/Eric/Github_master/file_parser/test/models/example_table_test.rb",
+		"/Users/Eric/Github_master/file_parser/specs/testformat1.csv",
+		"/Users/Eric/Github_master/bridge/db/schema.rb",
+		"/Users/Eric/Github_master/file_parser/test/application_system_test_case.rb",
+		"/Users/Eric/Github_master/bridge/db/migrate/20170217020136_create_avatars.rb",
+		"/Users/Eric/Github_master/file_parser/file_parser.rb",
+		"/Users/Eric/Github_master/file_parser/db/migrate/20180607160754_create_example_tables.rb",
+		"/Users/Eric/Github_master/bridge_old/app/controllers/custom_skills_controller.rb",
+		"/Users/Eric/Github_master/bridge/app/mixins/summary_page.rb",
+		"/Users/Eric/Github_master/bridge/app/policies/active_admin_policy.rb",
+		"/Users/Eric/Github_master/bridge/app/policies/admin_tools/home_controller_policy.rb",
+		"/Users/Eric/Github_master/file_parser/config/database.yml",
+		"/Users/Eric/Github_master/walker/input_file.csv",
+		"/Users/Eric/Github_master/file_parser/data/testformat1_2015-06-28.txt",
+		"/Users/Eric/Github_master/bridge/config/database.yml",
+		"/Users/Eric/Github_master/algorithms/comma_insert.rb",
+		"/Users/Eric/Github_master/algorithms/examples.rb",
+		"/Users/Eric/Github_master/walker/examples.rb",
+		"/Users/Eric/Github_master/walker/leader_board_tests.rb",
+		"/Users/Eric/Github_master/calldibs/db/seeds.rb",
+		"/Users/Eric/Documents/Paradox Interactive/Crusader Kings II/save games/autosave.ck2",
+		"/Users/Eric/Github_master/bridge/app/services/rapidfire/question_form.rb",
+		"/Users/Eric/Github_master/bridge/spec/modules/data_ingest_module_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/seeds.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/data/articles.csv",
+		"/Users/Eric/Library/Application Support/RimWorld/Saves/Smalltown-by-the-cave.rws",
+		"/Users/Eric/Github_master/stack-server/stack-server.rb",
+		"/Users/Eric/Github_master/stack-server/stack.rb",
+		"/Users/Eric/Github_master/stack-server/stack_server_original.rb",
+		"/Users/Eric/Github_master/stack-server/stack-test.rb",
+		"/Users/Eric/Github_master/bridge/spec/models/concerns/date_handlers_spec.rb",
+		"/Users/Eric/Github_master/bridge/app/policies/employers/job_listings_controller_policy.rb",
+		"/Users/Eric/Github_master/bridge/app/policies/comment_policy.rb",
+		"/Users/Eric/Github_master/bridge/app/policies/user_policy.rb",
+		"/Users/Eric/Github_master/bridge/bin/setup",
+		"/Users/Eric/Github_master/bridge/spec/controllers/missing_pdts_controller_spec.rb",
+		"/Users/Eric/Github_master/bridge/spec/controllers/military_jobs_controller_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/factories.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/controllers/pages_controller_spec.rb",
+		"/Users/Eric/Github_master/bridge/spec/models/concerns/summarizable_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/articles_controller.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/Gemfile",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/models/article.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/models/concerns/searchable_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/controllers/articles_controller_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/models/concerns/searchable.rb",
+		"/Users/Eric/Github_master/bridge/spec/models/concerns/identifiable_spec.rb",
+		"/Users/Eric/Github_master/bridge/spec/models/certification_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/features/search_for_article_spec.rb",
+		"/Users/Eric/Github_master/bridge/spec/controllers/concerns/user_authorization_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/models/searchable_spec.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/.rubocop.yml",
+		"/Users/Eric/Github_master/doximity/dox-blog/spec/rails_helper.rb",
+		"/Users/Eric/Github_master/bridge/.rubocop.yml",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/views/articles/_search_box.html.erb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/views/articles/index.html.slim",
+		"/Users/Eric/Github_master/bridge/app/models/civilian_job.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/views/administrator/articles/_form.html.slim",
+		"/Users/Eric/Github_master/doximity/todos.rb",
+		"/Users/Eric/Github_master/dox-fork/dox-blog/app/controllers/articles_controller.rb",
+		"/Users/Eric/Github_master/dox-fork/dox-blog/app/views/articles/index.html.slim",
+		"/Users/Eric/Github_master/dox-fork/dox-blog/app/views/articles/_search_box.html.erb",
+		"/Users/Eric/Github_master/bridge/app/models/contact_info.rb",
+		"/Users/Eric/Github_master/bridge/app/models/leadership_skill.rb",
+		"/Users/Eric/Github_master/bridge/app/models/skill_type.rb",
+		"/Users/Eric/Github_master/bridge/app/models/custom_skill.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/schema.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180301193050_fulltext_index.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180301191353_add_full_text_search.rb",
+		"/Users/Eric/Github_master/bridge/app/models/competence_area.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/models/keyword.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180228003800_create_keywords.rb",
+		"/Users/Eric/Github_master/bridge/app/models/concerns/role_mask.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/views/searches/_search_box.html.erb",
+		"/Users/Eric/Github_master/doximity/dox-blog/config/routes.rb",
+		"/Users/Eric/Github_master/streetlights-deploy/app/controllers/lights_controller.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/models/search.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/searches_controller.rb",
+		"/Users/Eric/Github_master/bridge/app/admin/research/position_skill.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/administrator/pages_controller.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180227211442_create_searches.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/search_controller.rb",
+		"/Users/Eric/Github_master/bridge/app/views/admin_tools/candidate_search/index.html.erb",
+		"/Users/Eric/Github_master/calldibs/app/assets/javascripts/_archive/rails.js",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/search_controller_controller.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/app/models/author.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/config/application.rb",
+		"/Users/Eric/Github_master/doximity/dox-blog/config/initializers/friendly_id.rb",
+		"/Users/Eric/Github_master/doximity/github/dox-blog/db/seeds.rb",
+		"/Users/Eric/Github_master/doximity/github/dox-blog/db/data/articles.csv",
+		"/Users/Eric/Github_master/bridge/Gemfile",
+		"/Users/Eric/Github_master/doximity/dox-blog/README.md"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 122.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "qsort.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 252.0
+	},
+	"output.find_results":
+	{
+		"height": 112.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 71.0
+	},
+	"pinned_build_system": "",
+	"project": "algorithms.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"docum",
+				"prototype/app/models/document_model.rb"
+			],
+			[
+				"custom_skill_spec",
+				"bridge/spec/models/custom_skill_spec.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"AbilityTest"
+			]
+		],
+		"width": 676.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,18 @@
+QuickSort
+
+15, 20, 5, 2, 31, 44, 64,4, 7, 18, 55
+                  == pivot
+
+Operations:
+	QuickSort(int arr[], int start, int end)
+		- Main
+	ChoosePivot(int arr[], start, end)
+		- Returns the index of the pivot element
+	Partition(arr[], 0, n-1, 1)  - Linear scan if n
+		- Writes array with all values less than pivot on left, greater than pivot on right
+		- Returns final position of the pivot after partitioning
+		[15, 20, 5, 2, 31, 44, 64, 4, 7, 18, 55]
+											 ==
+		LEFT [15, 20, 5, 2, 31] RIGHT [64, 4, 7, 18, 55]
+
+
