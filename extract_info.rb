@@ -59,7 +59,6 @@ def format_hash(hashy)
 		output_array.push("#{key}:#{values_count},#{top_value}")
 	end
 	output_array
-
 end
 
 arr = [ "key1 abcd", "key2 zzz", "key1 hello", "key3 world", "key1 hello"]
