@@ -18,23 +18,58 @@
 # 1 <= Length(KEYS) <= 256
 # 1 <= Length(VALUES) <= 800 
 
+# KEY:COUNT,MAX_VALUE
+require 'byebug'
 
 def solve(arr)
+	end_ = arr.length
+	input_hash = {}
 
+	arr.each_with_index do |entry, index|
+		key, value = parse_entry(entry)
+
+		if input_hash.has_key?(key)
+			update_hash(input_hash, key, value)
+		else
+			input_hash[key] = []
+			input_hash[key].push(value)
+		end
+	end
+
+	return format_hash(input_hash)
+end
+
+def update_hash(hashy, current_key, current_value)
+	existing_value = hashy[current_key]
+	existing_value.push(current_value)
+end
+
+def parse_entry(entry)
+	split = entry.split(' ')
+	return split[0], split[1]
+end
+
+def format_hash(hashy)
+	output_array = []
+	hashy.each do |entry|
+		# ["key1", ["abcd", "hello", "hello"]]
+		values_count = entry[1].count
+		top_value = entry[1].sort.last
+		key = entry[0]
+		output_array.push("#{key}:#{values_count},#{top_value}")
+	end
+	output_array
 
 end
 
-
-
-
-arr = [ “key1 abcd”, “key2 zzz”, “key1 hello”, “key3 world”, "key1 hello"]
-solve(arr)
+arr = [ "key1 abcd", "key2 zzz", "key1 hello", "key3 world", "key1 hello"]
+print solve(arr)
 
 # key1:3,hello
 # key2:1,zzz
 # key3:1,world
 
-# arr = [ “mark zuckerberg”, “tim cook”, “mark twain”]
+# arr = [ "mark zuckerberg", "tim cook", "mark twain"]
 
 # tim:1,cook
 # mark:2,zuckerberg
