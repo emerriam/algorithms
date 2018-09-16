@@ -37,6 +37,7 @@ end
 
 class Array
   def swap!(a,b)
+    print "swapping #{a} and #{b}\n#{self}\n"
     self[a], self[b] = self[b], self[a]
   end
 end
