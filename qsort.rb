@@ -37,8 +37,13 @@ end
 
 class Array
   def swap!(a,b)
-    print "swapping #{a} and #{b}\n#{self}\n"
+    if self[a] != self[b]
+      print "#{self}\nswapping #{self[a]} and #{self[b]}\n"
+    end
     self[a], self[b] = self[b], self[a]
+    if self[a] != self[b]
+      print "#{self}\n\n"
+    end
   end
 end
 
@@ -48,7 +53,7 @@ arr = [3,1,4,1,5,9,2,6,5,3]
 
 print "#{arr}\n"
 qsort(arr,0,arr.count)
-print "#{arr}\n"
+
 
 
 
