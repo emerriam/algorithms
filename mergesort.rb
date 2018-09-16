@@ -19,4 +19,6 @@ def merge(left, right)
   result + left + right
 end
 
-p merge_sort([15, 20, 2, 3, 25, 3, 14, 19])    
+arr = [15, 20, 2, 3, 25, 3, 14, 19]
+p merge_sort(arr)    
+

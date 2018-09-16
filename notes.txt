@@ -1,4 +1,10 @@
 QuickSort
+Not Stable
+
+Best Time: Ω(n log(n))	
+Average Time: Θ(n log(n))	
+Worst Time: O(n^2)	
+Worst space: O(log(n))
 
 15, 20, 5, 2, 31, 44, 64,4, 7, 18, 55
                   == pivot
@@ -14,5 +20,70 @@ Operations:
 		[15, 20, 5, 2, 31, 44, 64, 4, 7, 18, 55]
 											 ==
 		LEFT [15, 20, 5, 2, 31] RIGHT [64, 4, 7, 18, 55]
+
+MergeSort
+Is Stable
+Takes more space than Quicksort
+Worst performance when there are not many duplicates in the set.
+
+Best Time: Ω(n log(n))	
+Average Time: Θ(n log(n))	
+Worst Time: O(n log(n))	
+Worst Space: O(n)
+
+
+Steps: 
+	- Split the array in half
+	- Sort the left side, then sort the right side
+	- Merge the two arrays
+	- Start should never be more than n+1
+
+Operations:
+	- MergeSort(array, start, end_)
+	- Merge(array, start, middle, end_)
+		- Scan both arrays with seperate counters
+		- update counters as elements from left/right are sorted
+		- if start >= end_ -> return
+
+
+
+HeapSort/Heaps
+ - HeapSort is generally not implemented as stable
+ - Heap must be:
+ 	 	- a left-complete binary tree
+ 	 	- balanced
+ - Heaps generally start counting from 1
+ - Either all parent.value > child.value or arent.value < child.value
+
+Heap Operations
+
+	 - Basic
+			- find-max [or find-min]: find a maximum item of a max-heap, or a minimum item of a min-heap, respectively (a.k.a. peek)
+			- insert: adding a new key to the heap (a.k.a., push[3])
+			- extract-max [or extract-min]: returns the node of maximum value from a max heap [or minimum value from a min heap] after removing it from the heap (a.k.a., pop[4])
+			- delete-max [or delete-min]: removing the root node of a max heap [or min heap], respectively
+			- replace: pop root and push a new key. More efficient than pop followed by push, since only need to balance once, not twice, and appropriate for fixed-size heaps.[5]
+	- Creation
+			- create-heap: create an empty heap
+			- heapify: create a heap out of given array of elements
+			- merge (union): joining two heaps to form a valid new heap containing all the elements of both, preserving the original heaps.
+			- meld: joining two heaps to form a valid new heap containing all the elements of both, destroying the original heaps.
+	- Inspection
+		 	- size: return the number of items in the heap.
+			- is-empty: return true if the heap is empty, false otherwise.
+	- Internal
+		 	- increase-key or decrease-key: updating a key within a max- or min-heap, respectively
+			- delete: delete an arbitrary node (followed by moving last node and sifting to maintain heap)
+			- sift-up: move a node up in the tree, as long as needed; used to restore heap condition after insertion. Called "sift" because node moves up the tree until it reaches the correct level, as in a sieve.
+		 	- sift-down: move a node down in the tree, similar to sift-up; used to restore heap condition after deletion or replacement.
+
+
+
+
+
+
+
+
+
 
 
