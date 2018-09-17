@@ -1,3 +1,4 @@
+
 # Complete the mergeArrays function below.
 
 # This is a popular facebook problem. 
@@ -32,29 +33,52 @@ def mergeArrays(arr)
 
 	sort_order = 0
 	first_array = arr[0]
-	if first_array[0] < first_array.length
+	last_array = arr[arr.length-1]
+
+	if first_array[0] < first_array[first_array.length-1]
 		sort_order = 1
 	else 
 		sort_order = -1
 	end
 
-	(0..(arr.length - 1)).each do |current_array_index|
-		# print "current_array is #{arr[current_array_index]}\n"
-		# print "merging  #{arr[current_array_index]} and #{arr[current_array_index+1]}\n"
- 		# print "i is: #{current_array_index}\n"
- 		if arr[current_array_index+1] != nil
- 				# print "merging  #{arr[0]} and #{arr[current_array_index+1]}\n"
-			first_array = merge(first_array, arr[current_array_index+1])
+	# print "sort_ order is #{sort_order}\n"
+	if sort_order == -1
+		(arr.length.downto(0)).each do |current_array_index|
+	 		if arr[current_array_index-1] != nil
+				last_array = merge_down(last_array, arr[current_array_index-1])
+			end
 		end
-		# print "result #{arr}\n"
+		return last_array
+
+	else
+
+		(0..(arr.length - 1)).each do |current_array_index|
+	 		if arr[current_array_index+1] != nil
+				first_array = merge(first_array, arr[current_array_index+1])
+			end
+		end
+		return first_array
 	end
-	return first_array
+
+	
 
 end
 
-# def merge(arr, start, mid, end)
-def merge(left, right)
+def merge_down(left, right)
+	output_array = []
 
+	until left.empty? || right.empty?
+		if left.first <= right.first
+			output_array << right.pop
+		else
+			output_array << left.pop
+		end
+	end
+	return output_array + right + left
+end
+
+
+def merge(left, right)
 	output_array = []
 
 	until left.empty? || right.empty?
