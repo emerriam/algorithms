@@ -45,13 +45,12 @@ def mergeArrays(arr)
 	if sort_order == -1
 		(arr.length.downto(0)).each do |current_array_index|
 	 		if arr[current_array_index-1] != nil
-				last_array = merge_down(last_array, arr[current_array_index-1])
+				last_array = merge(last_array, arr[current_array_index-1])
 			end
 		end
 		return last_array
 
 	else
-
 		(0..(arr.length - 1)).each do |current_array_index|
 	 		if arr[current_array_index+1] != nil
 				first_array = merge(first_array, arr[current_array_index+1])
@@ -64,7 +63,7 @@ def mergeArrays(arr)
 
 end
 
-def merge_down(left, right)
+def merge(left, right)
 	output_array = []
 
 	until left.empty? || right.empty?
@@ -78,18 +77,33 @@ def merge_down(left, right)
 end
 
 
-def merge(left, right)
-	output_array = []
 
-	until left.empty? || right.empty?
-		if left.first <= right.first
-			output_array << left.shift
-		else
-			output_array << right.shift
-		end
-	end
-	return output_array + left + right
-end
+# def merge_down(left, right)
+# 	output_array = []
+
+# 	until left.empty? || right.empty?
+# 		if left.first <= right.first
+# 			output_array << right.pop
+# 		else
+# 			output_array << left.pop
+# 		end
+# 	end
+# 	return output_array + right + left
+# end
+
+
+# def merge(left, right)
+# 	output_array = []
+
+# 	until left.empty? || right.empty?
+# 		if left.first <= right.first
+# 			output_array << left.shift
+# 		else
+# 			output_array << right.shift
+# 		end
+# 	end
+# 	return output_array + left + right
+# end
 
 
 arr = [ [1, 3, 5, 7],
