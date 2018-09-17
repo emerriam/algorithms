@@ -47,7 +47,7 @@ class Array
   end
 end
 
-arr = Array.new(100) { rand(1...100) }
+arr = Array.new(15) { rand(1...10) }
 # arr = [3,5,8,5,10,2,1]
 # arr = [15, 7, 20, 7, 2, 31, 25, 64, 4, 7, 18, 55]
 
