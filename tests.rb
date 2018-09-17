@@ -11,7 +11,7 @@ def merger_first_into_second(arr1, arr2)
 		end
 
 	end
-	debugger
+
 	arr2.sort!
 
 	return arr2
@@ -25,11 +25,7 @@ print merger_first_into_second(arr1, arr2)
 
 
 # def dutch_flag_sort(input_string)
-
-# 	temp_hash = {}
-
 # 	arr = input_string.split('').sort!.reverse!
-
 # 	output = arr.join("")
 # 	return output
 # end

@@ -25,64 +25,70 @@
 # 	Given array may contains duplicate numbers.
 require 'byebug'
 
+
+
 def findZeroSum(arr)
+  arr.sort!
 
-	output_array = []
+  output_array = []
+  output_hash = {}
 
-	sorted = arr.sort!
+  (0..arr.length - 3).each do |i|
+    left_value = arr[i]
+    start_index = i + 1
+    right_index = arr.length - 1
 
-	left_index = 0
-	# [-6, -4, 1, 3, 9, 10]
-	temp_hash = {}
+    while(start_index < right_index) do
+      start_value = arr[start_index]
+      right_value = arr[right_index]
 
-	# Start from Left
-	arr.each_with_index do |value, i|
-		temp_hash[value] = arr[i]
+      if (left_value + start_value + right_value) > 0
+        right_index -= 1
+      else
+        start_index += 1
+      end
 
-		right_index = sorted.length-1
-		while right_index > 0
-			right_value = arr[right_index]
-			sum = arr[i] + right_value
-			
-			if arr.include?(negate_amount(sum))
-				add_up = []
-				add_up.push(arr[i])
-				add_up.push(right_value)
-				add_up.push(negate_amount(sum))
-				add_up.sort!
-				temp_hash[add_up] = 1
-				print "add_Up is: #{add_up}\n"
-				# output_array.push("#{arr[i]}, #{right_value}, #{negate_amount(sum)}")
-				# output_array[i].push()
-			end
-			debugger
-			right_index -= 1
-		end
-	end
+      if left_value + start_value + right_value == 0
+      	key = "#{left_value},#{start_value},#{right_value}"
+      	output_hash[key] = 1
+      end
+    end
+  end
 
+	return output_hash.keys
+  # No matches found
 
-# debugger
-	return temp_hash.keys
 end
 
 def negate_amount(input)
     return -(input.abs)
 end
 
-arr = [10, 3, -4, 1, -6, 9];
-print findZeroSum(arr)
+arr = [10, 3, -4, 1, -6, 9]
+# arr = [0,0,0]
+puts findZeroSum(arr)
 # 10,-4,-6
 # 3,-4,1
 
 # arr = [12, 34, -46];
-
 # 12,-46,34
 
 # arr = [0, 0, 0];
-
 # 0,0,0
 
 
 # arr = [-2, 2, 0 -2, 2];
-
 # 2,-2,0
+
+#---------------------------
+
+
+# def findZeroSum(elements, sum)
+#   elements.combination(3).detect do |a, b, c|
+#     (a + b + c) == sum
+#   end
+# end
+
+# arr = [10, 3, -4, 1, -6, 9]
+# # # arr = [0,0,0]
+# print findZeroSum(arr, 0)
