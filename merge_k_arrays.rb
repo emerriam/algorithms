@@ -63,22 +63,7 @@ def mergeArrays(arr)
 
 end
 
-def merge(left, right)
-	output_array = []
-
-	until left.empty? || right.empty?
-		if left.first <= right.first
-			output_array << right.pop
-		else
-			output_array << left.pop
-		end
-	end
-	return output_array + right + left
-end
-
-
-
-# def merge_down(left, right)
+# def merge(left, right)
 # 	output_array = []
 
 # 	until left.empty? || right.empty?
@@ -92,18 +77,33 @@ end
 # end
 
 
-# def merge(left, right)
-# 	output_array = []
 
-# 	until left.empty? || right.empty?
-# 		if left.first <= right.first
-# 			output_array << left.shift
-# 		else
-# 			output_array << right.shift
-# 		end
-# 	end
-# 	return output_array + left + right
-# end
+def merge_down(left, right)
+	output_array = []
+
+	until left.empty? || right.empty?
+		if left.first <= right.first
+			output_array << right.pop
+		else
+			output_array << left.pop
+		end
+	end
+	return output_array + right + left
+end
+
+
+def merge(left, right)
+	output_array = []
+
+	until left.empty? || right.empty?
+		if left.first <= right.first
+			output_array << left.shift
+		else
+			output_array << right.shift
+		end
+	end
+	return output_array + left + right
+end
 
 
 arr = [ [1, 3, 5, 7],
