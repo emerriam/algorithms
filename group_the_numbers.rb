@@ -18,13 +18,36 @@
 # 	Given array may contain duplicate numbers.
 # 	Solutions with linear time complexity and constant auxiliary space is expected.
 
-def solve(arr)
+def solve(arr, start, end_)
+	return arr if start >= end_
 
+	pivot_index = partition(arr, start, end_ )
 
 end
 
-arr = [1, 2, 3, 4]
+def partition(arr, start, end_)
+	# Returns the location of the pivot 
+	# Puts odd on one side evens on the other
 
+end
+
+
+class Array
+  def swap!(a,b)
+    if self[a] != self[b]
+      print "#{self}\nswapping #{self[a]} and #{self[b]}\n"
+    end
+    self[a], self[b] = self[b], self[a]
+    if self[a] != self[b]
+      print "#{self}\n\n"
+    end
+  end
+end
+
+
+
+arr = Array.new(15) { rand(1...100) }
+print solve(arr)
 
 # [4, 2, 1, 3]
 
