@@ -24,18 +24,29 @@
 # 	1 <= N <= 10^5
 # 	1 <= K <= 10^5
 # 	Given array may contain duplicate numbers.
+require 'byebug'
 
 
 
 def topK(arr, k)
-
-
+	return arr.uniq.sort!.reverse!.slice(0,k)
 end
 
 
-arr = [1, 5, 4, 4, 2]; k = 2
+
+
+arr = [4,8,9,6,6,2,10,2,8,1,2,9]
+k = 3
 # [4, 5]
 
+print topK(arr, k)
+# 1
+# 2
+# 4
+# 6
+# 8
+# 9
+# 10
 
 # arr = [1, 5, 1, 5, 1]; k = 3
 # [5, 1]
