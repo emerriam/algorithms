@@ -1,24 +1,38 @@
-[3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
-swapping 5 and 9
-[3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
-swapping 4 and 8
-[3, 1, 4, 1, 5, 3, 2, 6, 5, 9]
-swapping 7 and 8
-[3, 1, 4, 1, 5, 3, 2, 6, 5, 9]
-swapping 3 and 6
-[3, 1, 4, 1, 5, 3, 2, 5, 6, 9]
-swapping 1 and 0
-[3, 1, 4, 2, 5, 3, 1, 5, 6, 9]
-swapping 1 and 6
-[1, 3, 4, 2, 5, 3, 1, 5, 6, 9]
-swapping 4 and 6
-[1, 1, 4, 2, 5, 3, 3, 5, 6, 9]
-swapping 4 and 5
-[1, 1, 4, 2, 3, 3, 5, 5, 6, 9]
-swapping 3 and 2
-[1, 1, 4, 2, 3, 3, 5, 5, 6, 9]
-swapping 4 and 3
-[1, 1, 2, 4, 3, 3, 5, 5, 6, 9]
-swapping 4 and 5
-[1, 1, 2, 3, 4, 3, 5, 5, 6, 9]
-[1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+permute(["a", "b", "c"], 0) ADD  stack is: 1
+permute(["a", "b", "c"], 1) ADD  stack is: 2
+permute(["a", "b", "c"], 2) ADD  stack is: 3
+["a", "b", "c"]
+permute(["a", "b", "c"], 3) ADD  stack is: 4
+permute(["a", "b", "c"], 3) EXECUTE stack is: 3
+permute(["a", "b", "c"], 2) EXECUTE stack is: 2
+permute(["a", "c", "b"], 2) ADD  stack is: 3
+["a", "c", "b"]
+permute(["a", "c", "b"], 3) ADD  stack is: 4
+permute(["a", "c", "b"], 3) EXECUTE stack is: 3
+permute(["a", "c", "b"], 2) EXECUTE stack is: 2
+permute(["a", "b", "c"], 1) EXECUTE stack is: 1
+permute(["b", "a", "c"], 1) ADD  stack is: 2
+permute(["b", "a", "c"], 2) ADD  stack is: 3
+["b", "a", "c"]
+permute(["b", "a", "c"], 3) ADD  stack is: 4
+permute(["b", "a", "c"], 3) EXECUTE stack is: 3
+permute(["b", "a", "c"], 2) EXECUTE stack is: 2
+permute(["b", "c", "a"], 2) ADD  stack is: 3
+["b", "c", "a"]
+permute(["b", "c", "a"], 3) ADD  stack is: 4
+permute(["b", "c", "a"], 3) EXECUTE stack is: 3
+permute(["b", "c", "a"], 2) EXECUTE stack is: 2
+permute(["b", "a", "c"], 1) EXECUTE stack is: 1
+permute(["c", "b", "a"], 1) ADD  stack is: 2
+permute(["c", "b", "a"], 2) ADD  stack is: 3
+["c", "b", "a"]
+permute(["c", "b", "a"], 3) ADD  stack is: 4
+permute(["c", "b", "a"], 3) EXECUTE stack is: 3
+permute(["c", "b", "a"], 2) EXECUTE stack is: 2
+permute(["c", "a", "b"], 2) ADD  stack is: 3
+["c", "a", "b"]
+permute(["c", "a", "b"], 3) ADD  stack is: 4
+permute(["c", "a", "b"], 3) EXECUTE stack is: 3
+permute(["c", "a", "b"], 2) EXECUTE stack is: 2
+permute(["c", "b", "a"], 1) EXECUTE stack is: 1
+permute(["a", "b", "c"], 0) EXECUTE stack is: 0

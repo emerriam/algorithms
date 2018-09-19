@@ -29,7 +29,7 @@ require 'byebug'
 
 
 def topK(arr, k)
-	return arr.uniq.sort!.reverse!.slice(0,k)
+	return arr.uniq!.sort!.reverse!.slice!(0,k)
 end
 
 
