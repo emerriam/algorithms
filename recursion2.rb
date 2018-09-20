@@ -27,7 +27,6 @@ def permute(arr, i)
 		j = j + 1
 	end
 
-
  return arr
 	
 end
