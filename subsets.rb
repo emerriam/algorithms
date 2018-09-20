@@ -13,10 +13,7 @@ def printSubsets(arr, i, ssf, j)
 
 	if i == n
 		candidate = ssf.slice(0...j)
-		total = candidate.inject(0){|sum,x| sum + x }
-		if total > 1000
-			print "#{candidate} #{total} 1000+\n"
-		end
+		print "#{candidate}\n"
 		return
 	end
 
@@ -26,49 +23,29 @@ def printSubsets(arr, i, ssf, j)
 	return
 end
 
+def iterativeSubset(arr)
+	n = arr.size
+	i = 0
+	j = 0
 
-def IterativeSubsets(arr)
-	ssf = Array.new(arr.size)
-	i = 1
-	while i <= arr.length
+	prefix = arr[0]
 
-		no_of_subsets = arr.length/i
-		j = 0
-		while j <= no_of_subsets do
-			this_subset = arr.slice(j..(j + i - 1))
-			print "#{this_subset} #{i}\n"
-			j = j + 1
-		end
-		i = i + 1
-	end
-
+	
+	
 end
 
+def iterativePrint
 
+end
 # # Print all subsets in a given array
 
-def OldIterativeSubsets(arr)
 
-	i = 1
-	while i <= arr.length
-
-		no_of_subsets = arr.length/i
-		j = 0
-		while j <= no_of_subsets do
-			this_subset = arr.slice(j..(j + i - 1))
-			print "#{this_subset} #{i}\n"
-			j = j + 1
-		end
-		i = i + 1
-	end
-
-end
 
 
 # 48 sets - 8 containing each letter?
-# arr = ["t", "d", "c", "o"]
+arr = ["t", "d", "c", "o"]
 # arr = ["a", "b", "c", "d"]
-arr = Array.new(4) { rand(1...900) }
-# iterativeSubsets(arr)
-recursiveSubsets(arr)
+# arr = Array.new(4) { rand(1...900) }
+iterativeSubsets(arr)
+# recursiveSubsets(arr)
 
