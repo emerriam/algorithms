@@ -1,51 +1,37 @@
 require 'byebug'
 
 
-def recursiveSubsets(arr)
-
-	ssf = Array.new(arr.size)
-	printSubsets(arr, 0, ssf, 0)
-
+def generate_all_subsets(arry)
+	output = []
+	ssf = Array.new(arry.size)
+	arr = arry.split('')
+	x = printSubsets(arr, 0, ssf, 0, output)
+	print x
+	# return output
 end
 
-def printSubsets(arr, i, ssf, j)
+def printSubsets(arr, i, ssf, j, output)
 	n = arr.size
 
 	if i == n
 		candidate = ssf.slice(0...j)
-		print "#{candidate}\n"
-		return
+			output.push(candidate.join)
+		return output
 	end
 
-	printSubsets(arr, i+1, ssf, j)
+	printSubsets(arr, i+1, ssf, j, output)
 	ssf[j] = arr[i]
-	printSubsets(arr, i+1, ssf, j+1)
-	return
+	printSubsets(arr, i+1, ssf, j+1, output)
+	return output
 end
 
-def iterativeSubset(arr)
-	n = arr.size
-	i = 0
-	j = 0
-
-	prefix = arr[0]
-
-	
-	
-end
-
-def iterativePrint
-
-end
 # # Print all subsets in a given array
-
-
-
-
 # 48 sets - 8 containing each letter?
-arr = ["t", "d", "c", "o"]
+# arr = ["t", "d", "c", "o"]
+arr = "a"
 # arr = ["a", "b", "c", "d"]
 # arr = Array.new(4) { rand(1...900) }
-iterativeSubsets(arr)
-# recursiveSubsets(arr)
+# iterativeSubsets(arr)
+generate_all_subsets(arr)
+
 
