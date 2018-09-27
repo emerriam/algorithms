@@ -2,14 +2,13 @@ require 'byebug'
 
 
 def generate_all_subsets(arry)
-	# if arry.empty? || arry.nil? || arry == [" "]
-	# 	return "\n"
-	# else
+	if !arry || arry.nil? || arry.empty?
+		return false
+	end
 		output = []
 		ssf = Array.new(arry.size)
 		arr = arry.split('')
 		return printSubsets(arr, 0, ssf, 0, output)
-	# end
 end
 
 
@@ -30,5 +29,5 @@ def printSubsets(arr, i, ssf, j, output)
 end
 
 
-arry = "ay"
+arry = nil
 print generate_all_subsets(arry)

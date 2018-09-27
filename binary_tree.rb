@@ -1,56 +1,74 @@
 module BinaryTree
+  class EmptyNode
+    def to_a
+      []
+    end
+
+    def include?(*)
+      false
+    end
+
+    def push(*)
+      false
+    end
+    alias_method :<<, :push
+
+    # def inspect
+    #   nil
+    # end
+
+    def value 
+      nil
+    end
+  end
+
   class Node
-    attr_reader :word, :count, :left, :right
+    # our three features:
+    attr_reader :value
+    attr_accessor :left, :right
 
-    include Enumerable
-
-    def initialize(word)
-      @word, @count = word, 1
+    def initialize(v)
+      @value = v
+      @left = EmptyNode.new
+      @right = EmptyNode.new
     end
 
-    def size
-      size = 1
-      size += @left.size  unless left.nil?
-      size += @right.size unless right.nil?
-      size
+    def push(v)
+      case value <=> v
+      when 1 then push_left(v)
+      when -1 then push_right(v)
+      when 0 then false # the value is already present
+      when '#' then false
+      end
     end
+    alias_method :<<, :push
 
-    def insert(another_one)
-      case @word <=> another_one.word
-        when 1
-          insert_into(:left, another_one)
-        when 0
-          @count += 1
-        when -1
-          insert_into(:right, another_one)
+    def include?(v)
+      case value <=> v
+      when 1 then left.include?(v)
+      when -1 then right.include?(v)
+      when 0 then true # the current node is equal to the value
       end
     end
 
-    def each
-      @left.each {|node| yield node } unless @left.nil?
-      yield self
-      @right.each {|node| yield node } unless @right.nil?
+    def inspect
+      # "{#{value}:#{left.inspect}|#{right.inspect}}"
+      # "value: #{value} #{left.inspect}|#{right.inspect}\n"
+      "#{value.to_s}"
     end
 
-    def words
-      entries.map {|e| e.word }
+    def to_a
+      left.to_a + [value] + right.to_a
     end
 
-    def count_all
-      self.map { |node| node.count }.reduce(:+)
-    end
+    private
 
-    def insert_into(destination, another_one)
-      var = destination.to_s
-      eval(%Q{
-        if @#{var}.nil?
-          @#{var} = another_one
-        else
-          @#{var}.insert(another_one)
-        end
-      })
-    end
+      def push_left(v)
+        left.push(v) or self.left = Node.new(v)
+      end
 
-    # protected :insert_into
+      def push_right(v)
+        right.push(v) or self.right = Node.new(v)
+      end
   end
 end
