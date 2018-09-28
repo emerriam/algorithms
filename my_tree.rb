@@ -7,19 +7,33 @@ class Node
     @value = value
   end
 
+  def BFT_iterative(root)
+    if root == nil
+      return
+    end
+    q = Queue.new
+    q.enqueue(root)
 
-
-  def pre_order(root)
+    while !q.empty?
+      root = q.dequeue # I
+      print("#{root.value}\n") 
+      if !root.left.nil?
+        q.enqueue(root.left)
+      end
+      if !root.left.nil?
+        q.enqueue(root.right)
+      end
+    end
   end
+
 
   def DFT_recursive(root)
     if root == nil
       return
     end
-    # print "#{root.value}\n"
-    depth_first_recursive(root.left)
+    DFT_recursive(root.left)
     print "#{root.value}\n"
-    depth_first_recursive(root.right)
+    DFT_recursive(root.right)
   end
 
   def DFT_iterative(root)
@@ -51,6 +65,24 @@ class Node
     end
   end
 
+end
+
+class Queue
+  def initialize
+    @data = []
+  end
+
+  def enqueue(element)
+    @data.push(element)
+  end
+
+  def dequeue
+    @data.shift
+  end
+
+  def empty?
+    @data.empty?
+  end
 end
 
 class Stack
@@ -87,4 +119,5 @@ root.right.right = Node.new("M")
 root.left.left.left = Node.new("A")
 root.left.left.right = Node.new("G")
 
-print root.DFT_iterative(root)
+
+print root.BFT_iterative(root)
