@@ -15,6 +15,55 @@ include BinaryTree
 # 1 3 6
 # 1 3 7
 
+
+class Node
+  attr_accessor :val, :left, :right
+
+  def initialize(val)
+    @val = val
+    @left = nil
+    @right = nil
+  end
+end
+
+def createTree(str)
+  str.strip()
+  return if str.empty?
+  deserialize(str)
+end
+
+def deserialize(str) 
+  nodes = str.split(" ")
+  i = 0
+  
+  addNode = ->() {
+    if(i == nodes.length)
+      return nil
+    elsif(nodes[i] == "" || nodes[i] == '#' )
+      x = nil
+      i = i+1
+      return x 
+    else
+      root =  Node.new(Integer(nodes[i]));
+      i = i+1
+      root.left = addNode.call();
+      root.right = addNode.call();
+      return root
+    end
+  }
+  res = addNode.call()
+  return res
+end
+
+
+
+def printInorder(root)
+  return if root.nil?
+  printInorder(root.left)
+  print root.val, " "
+  printInorder(root.right)
+end
+
 def printAllPaths(root) 
 	arr = root
 	root = Node.new(root[0])
