@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"parseSubse",
+				"parseSubsetsRecurse"
+			],
+			[
+				"entry",
+				"parse_entry"
+			],
+			[
 				"item_value",
 				"item_value"
 			],
@@ -44,10 +52,68 @@
 	"buffers":
 	[
 		{
-			"file": "qsort.rb",
+			"contents": "def findSingleValueTrees(node) \n\treturn 2\nend\n",
+			"file": "single_value_tree.rb",
+			"file_size": 38,
+			"file_write_time": 131826670569424532,
 			"settings":
 			{
-				"buffer_size": 1135,
+				"buffer_size": 46,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "def findSingleValueTrees(node)"
+			}
+		},
+		{
+			"file": "my_tree.rb",
+			"settings":
+			{
+				"buffer_size": 3828,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "print_all_paths.rb",
+			"settings":
+			{
+				"buffer_size": 1568,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "binary_tree.rb",
+			"settings":
+			{
+				"buffer_size": 1294,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 27 files for \"BinaryTree\"\n\n/Users/Eric/Github_master/algorithms/binary_tree.rb:\n    1: module BinaryTree\n\n/Users/Eric/Github_master/algorithms/binary_search_trees.rb:\n    4: # include BinaryTree\n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "binary_search_trees.rb",
+			"settings":
+			{
+				"buffer_size": 628,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "week_2_test.rb",
+			"settings":
+			{
+				"buffer_size": 2115,
 				"line_ending": "Unix"
 			}
 		}
@@ -101,10 +167,36 @@
 	],
 	"file_history":
 	[
+		"/Users/Eric/Github_master/algorithms/find_all_arrangements.rb",
+		"/Users/Eric/Github_master/algorithms/scrap.java",
+		"/Users/Eric/Github_master/algorithms/print_all_paths.rb",
+		"/Users/Eric/Github_master/algorithms/binary_tree.rb",
+		"/Users/Eric/Github_master/algorithms/binary_search_trees.rb",
+		"/Users/Eric/Github_master/algorithms/subsets.rb",
+		"/Users/Eric/Github_master/algorithms/week_2a_test.rb",
+		"/Users/Eric/Github_master/algorithms/palindrome.rb",
+		"/Users/Eric/Github_master/algorithms/week_2_test.rb",
+		"/Users/Eric/Github_master/algorithms/recursion2.rb",
+		"/Users/Eric/Github_master/algorithms/nuts_and_bolts.rb",
+		"/Users/Eric/Github_master/algorithms/notes.txt",
+		"/Users/Eric/Github_master/algorithms/qsort.rb",
+		"/Users/Eric/Github_master/algorithms/group_the_numbers.rb",
+		"/Users/Eric/Github_master/algorithms/heapsort.rb",
+		"/Users/Eric/Github_master/algorithms/mergesort.rb",
+		"/Users/Eric/Github_master/algorithms/scrap.rb",
+		"/Users/Eric/Github_master/algorithms/extract_info.rb",
+		"/Users/Eric/Github_master/algorithms/countpaths.rb",
+		"/Users/Eric/Github_master/algorithms/recursion.rb",
+		"/Users/Eric/Github_master/algorithms/tests.rb",
+		"/Users/Eric/Github_master/algorithms/top_k.rb",
+		"/Users/Eric/Github_master/algorithms/three_sum.rb",
+		"/Users/Eric/random_notes.txt",
+		"/Users/Eric/Github_master/algorithms/merge_k_arrays.rb",
+		"/Users/Eric/Github_master/algorithms/extract_info.txt",
+		"/Users/Eric/Github_master/algorithms/nuts_and_bolts.txt",
 		"/Users/Eric/Github_master/spiral_travel/lecture_notes.txt",
 		"/Users/Eric/Github_master/spiral_travel/mergesort.rb",
 		"/Users/Eric/Github_master/spiral_travel/classwork.rb",
-		"/Users/Eric/Github_master/algorithms/qsort.rb",
 		"/Users/Eric/Github_master/spiral_travel/nuts_and_bolts.rb",
 		"/Users/Eric/Github_master/spiral_travel/scrap.rb",
 		"/Users/Eric/Github_master/spiral_travel/heapsort.rb",
@@ -202,43 +294,20 @@
 		"/Users/Eric/Github_master/bridge/app/models/contact_info.rb",
 		"/Users/Eric/Github_master/bridge/app/models/leadership_skill.rb",
 		"/Users/Eric/Github_master/bridge/app/models/skill_type.rb",
-		"/Users/Eric/Github_master/bridge/app/models/custom_skill.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/db/schema.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180301193050_fulltext_index.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180301191353_add_full_text_search.rb",
-		"/Users/Eric/Github_master/bridge/app/models/competence_area.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/models/keyword.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180228003800_create_keywords.rb",
-		"/Users/Eric/Github_master/bridge/app/models/concerns/role_mask.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/views/searches/_search_box.html.erb",
-		"/Users/Eric/Github_master/doximity/dox-blog/config/routes.rb",
-		"/Users/Eric/Github_master/streetlights-deploy/app/controllers/lights_controller.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/models/search.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/searches_controller.rb",
-		"/Users/Eric/Github_master/bridge/app/admin/research/position_skill.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/administrator/pages_controller.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/db/migrate/20180227211442_create_searches.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/search_controller.rb",
-		"/Users/Eric/Github_master/bridge/app/views/admin_tools/candidate_search/index.html.erb",
-		"/Users/Eric/Github_master/calldibs/app/assets/javascripts/_archive/rails.js",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/controllers/search_controller_controller.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/app/models/author.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/config/application.rb",
-		"/Users/Eric/Github_master/doximity/dox-blog/config/initializers/friendly_id.rb",
-		"/Users/Eric/Github_master/doximity/github/dox-blog/db/seeds.rb",
-		"/Users/Eric/Github_master/doximity/github/dox-blog/db/data/articles.csv",
-		"/Users/Eric/Github_master/bridge/Gemfile",
-		"/Users/Eric/Github_master/doximity/dox-blog/README.md"
+		"/Users/Eric/Github_master/bridge/app/models/custom_skill.rb"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 122.0,
 		"where_history":
 		[
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>"
 		]
 	},
 	"find_state":
@@ -246,6 +315,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'#'",
+			"#",
+			" ",
+			"create_binary_search_tree",
+			"BinaryTree",
+			"#",
+			" ",
+			"back_index",
+			"front",
+			"ary",
+			"”",
+			"“"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -253,6 +334,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"nil",
+			"'#'",
+			",",
+			"'#'",
+			",",
+			"right_index",
+			"left_value",
+			"arr",
+			"\""
 		],
 		"reverse": false,
 		"show_context": false,
@@ -268,11 +358,214 @@
 			[
 				{
 					"buffer": 0,
-					"file": "qsort.rb",
+					"file": "single_value_tree.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1135,
+						"buffer_size": 46,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"auto_name": "def findSingleValueTrees(node)",
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "my_tree.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "print_all_paths.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "binary_tree.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1294,
+								254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 193.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										104,
+										114
+									],
+									[
+										194,
+										204
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "binary_search_trees.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "week_2_test.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2115,
 						"regions":
 						{
 						},
@@ -286,14 +579,13 @@
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -316,11 +608,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.478863899929,
 			1.0
 		],
 		"rows":
@@ -388,7 +687,7 @@
 		],
 		"width": 676.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -396,7 +695,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 242.0,
+	"side_bar_width": 256.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
