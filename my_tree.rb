@@ -6,8 +6,12 @@ class Node
   def initialize(value)
     @value = value
   end
-
+  def children?
+    return left || right
+  end
+  # ["I", "O", "H", "L", "R", "T", "M", "A", "G"]
   def BFT_iterative(root)
+    print '["I", "O", "H", "L", "R", "T", "M", "A", "G"]' + "\n"
     if root == nil
       return
     end
@@ -26,17 +30,19 @@ class Node
     end
   end
 
-
-  def DFT_recursive(root)
+  # ["A", "L", "G", "O", "R", "I", "T", "H", "M"]
+  def DFT_in_order_recursive(root)
     if root == nil
       return
     end
-    DFT_recursive(root.left)
+    DFT_pre_order_recursive(root.left)
     print "#{root.value}\n"
-    DFT_recursive(root.right)
+    DFT_pre_order_recursive(root.right)
   end
 
-  def DFT_iterative(root)
+  # ["A", "L", "G", "O", "R", "I", "T", "H", "M"]
+  def DFT_in_order_iterative(root)
+    print '["A", "L", "G", "O", "R", "I", "T", "H", "M"]' + "\n"
     if root == nil
       return
     end
@@ -64,8 +70,61 @@ class Node
       end
     end
   end
+  # ["I", "O", "L", "A", "G", "R", "H", "T", "M"]
+  def DFT_pre_order_recursive(root)
+    if root == nil
+      return
+    end
+    print "#{root.value}\n"
+    DFT_pre_order_recursive(root.left)
+    DFT_pre_order_recursive(root.right)
+  end
+
+  # ["I", "O", "L", "A", "G", "R", "H", "T", "M"]
+  def DFT_pre_order_iterative(root)
+    print '["I", "O", "L", "A", "G", "R", "H", "T", "M"]' + "\n"
+
+  end
+
+  # ["A", "G", "L", "R", "O", "T", "M", "H", "I"]
+  def DFT_post_order_recursive(root)
+    if root == nil
+      return
+    end
+    
+    DFT_post_order_recursive(root.left)
+    DFT_post_order_recursive(root.right)
+    print "#{root.value}\n"
+    
+  end
+
+  #  ["A", "G", "L", "R", "O", "T", "M", "H", "I"]
+  def DFT_post_order_iterative(root)
+    print '["A", "G", "L", "R", "O", "T", "M", "H", "I"]' + "\n"
+    st1 = Stack.new
+    st2 = Stack.new
+
+    st1.push(root)
+    while !st1.empty?
+      root = st1.pop
+      st2.push(root)
+      if !root.left.nil?
+        st1.push(root.left)
+      end
+      if !root.right.nil?
+        st1.push(root.right)
+      end
+    end
+
+    while !st2.empty?
+      print "#{st2.pop.value}\n"
+    end
+
+  end
 
 end
+
+
 
 class Queue
   def initialize
@@ -94,6 +153,10 @@ class Stack
     @data.push(element)
   end
 
+  def peek
+    @data.first
+  end
+
   def pop
     @data.pop
   end
@@ -120,4 +183,8 @@ root.left.left.left = Node.new("A")
 root.left.left.right = Node.new("G")
 
 
+print root.DFT_post_order_iterative(root)
 print root.BFT_iterative(root)
+print root.DFT_in_order_iterative(root)
+print root.DFT_pre_order_iterative(root)
+print root.DFT_post_order_iterative(root)
