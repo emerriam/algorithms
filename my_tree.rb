@@ -83,7 +83,21 @@ class Node
   # ["I", "O", "L", "A", "G", "R", "H", "T", "M"]
   def DFT_pre_order_iterative(root)
     print '["I", "O", "L", "A", "G", "R", "H", "T", "M"]' + "\n"
-
+    st = Stack.new
+    if root == nil
+      return
+    end
+    st.push(root)
+    while !st.empty?
+      root = st.pop
+      print "#{root.value}\n"
+      if root.right
+        st.push(root.right)
+      end
+      if root.left
+        st.push(root.left)
+      end
+    end
   end
 
   # ["A", "G", "L", "R", "O", "T", "M", "H", "I"]
@@ -186,5 +200,5 @@ root.left.left.right = Node.new("G")
 print root.DFT_post_order_iterative(root)
 print root.BFT_iterative(root)
 print root.DFT_in_order_iterative(root)
-print root.DFT_pre_order_iterative(root)
 print root.DFT_post_order_iterative(root)
+print root.DFT_pre_order_iterative(root)
