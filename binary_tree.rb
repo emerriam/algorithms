@@ -13,10 +13,6 @@ module BinaryTree
     end
     alias_method :<<, :push
 
-    # def inspect
-    #   nil
-    # end
-
     def value 
       nil
     end
