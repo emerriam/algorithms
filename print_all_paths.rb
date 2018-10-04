@@ -38,18 +38,19 @@ def DFT_print_all_paths_to_leaves(root, path, path_size)
   end
 
   path[path_size] = root.val
+
   path_size = path_size + 1
 
   if root.left.nil? && root.right.nil?
     print path.map { |i| i.to_s}.join(" ")
     print "\n"
+
   else
     DFT_print_all_paths_to_leaves(root.left, path, path_size)
     DFT_print_all_paths_to_leaves(root.right, path, path_size)
   end
 
 end
-
 
 
 def createTree(str)

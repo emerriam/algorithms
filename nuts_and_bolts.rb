@@ -7,6 +7,8 @@ require 'stringio'
 # 20/24 tests pass .01 - .04 mb
 def solve(nuts, bolts)
 	output_array = []
+	nuts.sort!
+	bolts.sort!.reverse!
 	nuts.each do |nut|
 		match_ = search_array(nut, bolts)
 	  if match_ != nil
