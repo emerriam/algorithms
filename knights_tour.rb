@@ -7,12 +7,10 @@ include MyGraph
 
 def find_minimum_number_of_moves(rows, cols, start_row, start_col, end_row, end_col)
 
-	board = Board.new(rows, cols, [])
 	board = set_up(rows, cols)
 
 	start_pos = board[start_row][start_col]
 	end_pos = board[end_row][end_col]
-
 end
 
 def set_up(rows, cols)
