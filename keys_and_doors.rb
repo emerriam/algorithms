@@ -1,18 +1,19 @@
+
 class Vertex < Object
 
   attr_accessor :label, :prev, :row, :col, :neighbors, :graph
 
   def initialize(label, row, col, prev, graph)
-    @label = label
+  	@label = label
     @graph = graph
-    @prev = nil unless !prev.nil?
-    @row = row
-    @col = col
+  	@prev = nil unless !prev.nil?
+  	@row = row
+  	@col = col
     @neighbors = []
   end
 
   def position
-    [row, col]
+  	[row, col]
   end
 
   def valid_position?(_row, _col)
@@ -45,14 +46,7 @@ class Vertex < Object
   end
 end
 
-class ListGraph < Array
-  def add_edge(node_a, node_b)
-    node_a.adjacents << node_b
-    node_b.adjacents << node_a
-  end
-end
-
-class MatrixGraph < Array
+class Graph < Array
   attr_accessor :rows, :cols, :grid
 
   def initialize(rows, cols)
@@ -91,3 +85,6 @@ class Queue < Object
     @data.empty?
   end
 end
+
+
+
