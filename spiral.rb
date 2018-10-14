@@ -58,7 +58,7 @@ def printSpirally(matrix)
 
     # Traverse bottom to top
     i = end_row
-    if start_column < end_column
+    if start_column <= end_column
       for i in i.downto(start_row) do
         output += matrix[i][start_column].to_s
       end
@@ -71,6 +71,8 @@ def printSpirally(matrix)
 end
 
 
+matrix = [['q', 'w'],['e', 'r'],['t', 'y'],['u', 'i'],['o', 'p'],['a', 's'],['d', 'f'],['g', 'h'],['j', 'k']]
 
-matrix = [['X','Y','A'],['M','B','C'],['P','Q','R']]
+# matrix = [['X','Y','A'],['M','B','C'],['P','Q','R']]
 print printSpirally(matrix)
+print "\n"
