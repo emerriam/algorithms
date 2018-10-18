@@ -71,8 +71,8 @@ def printSpirally(matrix)
 end
 
 
-matrix = [['q', 'w'],['e', 'r'],['t', 'y'],['u', 'i'],['o', 'p'],['a', 's'],['d', 'f'],['g', 'h'],['j', 'k']]
+# matrix = [['q', 'w'],['e', 'r'],['t', 'y'],['u', 'i'],['o', 'p'],['a', 's'],['d', 'f'],['g', 'h'],['j', 'k']]
 
-# matrix = [['X','Y','A'],['M','B','C'],['P','Q','R']]
+matrix = [['X','Y','A'],['M','B','C'],['P','Q','R']]
 print printSpirally(matrix)
 print "\n"

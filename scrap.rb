@@ -1,4 +1,28 @@
-"47
-89 110 93 162 83 100 \# \# 204 \# \# 69 199 \# \# 181 \# \# \# 184 161 143 6 \# \# 13 \# \# \# \# 62 150 \# \# 168 114 247 \# \# 186 85 \# \# 204 \# \# \# 
-141
-18 46 73 21 77 248 \# \# 196 \# \# \# 134 \# \# 182 83 180 \# \# 71 22 \# \# 16 57 40 \# \# 177 \# \# \# \# 75 166 61 56 146 123 \# \# 17 \# \# \# \# \# 72 80 172 105 104 \# \# 84 \# \# \# 3 176 98 62 \# \# 227 18 \# \# 96 \# \# \# \# 183 206 \# \# 44 146 211 200 55 100 85 \# \# 6 \# \# \# \# 61 247 128 37 177 118 125 229 \# \# 249 \# \# \# \# \# \# \# 173 230 80 88 \# \# 122 \# \# \# \# 208 144 126 1 249 58 \# \# 82 \# \# \# \# 122 \# \# \# 248 \# \#" 
+
+class stairs 
+{ 
+
+    static int countWaysUtil(int n, int m) 
+    { 
+        if (n <= 1) 
+            return n; 
+        int res = 0; 
+        for (int i = 1; i<=m && i<=n; i++) 
+            res += countWaysUtil(n-i, m); 
+        return res; 
+    } 
+   
+    // Returns number of ways to reach s'th stair 
+    static int countWays(int s, int m) 
+    { 
+        return countWaysUtil(s+1, m); 
+    } 
+  
+  
+    /* Driver program to test above function */ 
+    public static void main (String args[]) 
+    { 
+          int s = 4,m = 2; 
+            System.out.println("Number of ways = "+ countWays(s,m)); 
+    } 
+}/* This code is contributed by Rajat Mishra */
