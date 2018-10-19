@@ -1,13 +1,17 @@
 require 'byebug'
+
+def fib_main(n)
+	fibonacci(n)
+end
+
 def fibonacci(n)
-	if (0..1).include? n
+	if n == 0 || n == 1
 		return n
 	end
-
 	if n > 1
-   fibonacci( n - 1 ) + fibonacci( n - 2 )
+   	fibonacci( n - 1 ) + fibonacci( n - 2 )
  	end
 
 end
 
-print "#{fibonacci(9)}\n"
+print "#{fib_main(9)}\n"
