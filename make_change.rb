@@ -10,7 +10,8 @@ def makeChange(c, intDenominations)
 
 	denoms = intDenominations.sort!.reverse!
 	makeChangeAssistant(target, denoms, den_hash)
-	debugger
+	print den_hash
+
 end
 
 def makeChangeAssistant(target, denoms, den_hash)
@@ -19,9 +20,10 @@ def makeChangeAssistant(target, denoms, den_hash)
 	count = 0
 
 	denoms.each do |den|
-		count = count + makeChangeAssistant(target - 1, [den], den_hash)
+		count = count + makeChangeAssistant(target - den, denoms, den_hash)
+		den_hash[den] = count
+
 	end
-	
 	return 1
 end
 

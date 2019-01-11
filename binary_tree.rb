@@ -48,8 +48,6 @@ module BinaryTree
     end
 
     def inspect
-      # "{#{value}:#{left.inspect}|#{right.inspect}}"
-      # "value: #{value} #{left.inspect}|#{right.inspect}\n"
       "#{value.to_s}"
     end
 
