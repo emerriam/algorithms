@@ -15,11 +15,7 @@ end
 def printSubsets(arr, i, ssf, j, output)
 	n = arr.size
 
-	if i == n
-		candidate = ssf.slice(0...j)
-		output.push(candidate.join)
-		return output
-	end
+	output = has_ssf(i, n, ssf)
 
 	printSubsets(arr, i+1, ssf, j, output)
 	ssf[j] = arr[i]
@@ -28,6 +24,13 @@ def printSubsets(arr, i, ssf, j, output)
 	return output
 end
 
+def has_ssf
+	if i == n
+		candidate = ssf.slice(0...j)
+		output.push(candidate.join)
+		return output
+	end
+end
 
 arry = nil
 print generate_all_subsets(arry)
