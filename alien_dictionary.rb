@@ -21,13 +21,13 @@ def find_order(words)
 
 		end	
 	end
-
+	debugger
 	letter_hash.each do |lh|
 
 		while letter_hash.size > 0
 
 			if lh[1]["in"].size == 0
-				debugger
+				
 				this_letter = lh[1]
 				output_array.push(this_letter)
 				letter_hash.delete(this_letter)

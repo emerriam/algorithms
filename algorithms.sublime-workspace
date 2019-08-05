@@ -59,24 +59,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "Where did Plato get his information of Atlantis from since you are expert enough to make claims against what others claim? Also the measurement of the eye and Platos Atlantis match up, off by only a few feet. Even mainstream Archeologists are starting to come around to the idea of pre flood, advanced civilization. You on the other hand are throwing shade on Jimmy but are worried about what people have to say against your opinion of Jimmy's work. It is to be noted that Herodotus made a map before Plato was even born, showing the known world. Who was the first king of the Mauri people in the location of the eye? His name was Atlas. Weird being Poseidon's first born who ruled over Atlantis was named...Atlas(Atlantis meaning the city of Atlas. What about the name of those mountains....Atlas. The story of Atlantis comes from Egypt by way of Solon. It seems to me you are trying to discount a fragmenting comet struck the earth 12,980 years ago give or take a few years, throwing the earth into the Younger Dryas for 1200 years(which was a mini ice age). A fragmenting comet will have multiple peices failing in multiple locations. North America, Greenland. The Atlantic possibly? Ice cores are hard to dismiss there Mr. Shade tree. The couple that came up with this whole theory are pioneers unlike yourself. While people are out here trying to find the origins of our species here you are throwing shade trying to discount any possibility that they are right. There have been many less convincing archaeological finds claiming to be Atlantis. The timeline that we humans go by has to and will be rewritten in due time. \"Experts\" don't like it when someone without a degree in archaeology finds something they have overlooked. So in turn they try to discredit anything and everything possible to poke holes in their theory. Then there are people like you...",
-			"settings":
-			{
-				"buffer_size": 1864,
-				"line_ending": "Unix",
-				"name": "Where did Plato get his information of Atlantis fr"
-			}
-		},
-		{
-			"contents": "Everything you said is pure nonsense. First - this is how science works. You make a claim, put forward a series of arguments, and other people do their best to rip it to shreds. If the hypothesis survives, then it is worth something. I am simply pointing out fatal flaws in Jimmy's arguments.\n\nPlato, quite simply, made up the stories of Atlantis (I don't know that we can rule out any cultural inspiration). It seems clear from the record that none of his contemporaries took his stories to be an actual historical claim. It would be like me referring to Robin Hood in order to make a point.\n\nAnd experts like it just fine when someone comes up with a new idea. If there were anything to Jimmy's claim, then actual archaeologists would be all over it. What they would likely do is grab all the credit for themselves. But they would not ignore a genuine lead to finding f**king Atlantis if they thought it was worth anything. They would be famous, their careers would be made, and if they had to give credit to some amateur for pointing it out, so what. It's like the girl who found the sword - thanks kid, now step aside so we can do some real science.\n\nAnd again - all the push back in the comments is trying desperately to distract from the only things that matter:\n1 - there is zero physical evidence of Atlantis\n2 - The lines of argument being offered are all extremely weak, an example of trying to present superficial similarities as if they are highly specific when they are not, and ignoring major problems. It's just terrible science.\n\nSo stop all the whining about \"experts\" and being open minded and throwing shade and other nonsense. It's meaningless. Use this as an opportunity to learn a little bit about how science actually works.",
-			"settings":
-			{
-				"buffer_size": 1747,
-				"line_ending": "Unix",
-				"name": "Everything you said is pure nonsense. First - this"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -121,12 +103,15 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/Eric/Github_master/algorithms"
-	],
 	"file_history":
 	[
+		"/Users/Eric/Github_master/algorithms/dangerous_spreadsheets.rb",
+		"/Users/Eric/Github_master/algorithms/dangerous_spreadsheets_human.rb",
+		"/Users/Eric/Github_master/algorithms/subsets.rb",
+		"/Users/Eric/Github_master/algorithms/three_sum.rb",
+		"/Users/Eric/Github_master/algorithms/binary_tree.rb",
+		"/Users/Eric/Github_master/algorithms/find_all_arrangements.rb",
+		"/Users/Eric/Github_master/algorithms/test.rb",
 		"/Users/Eric/Github_master/ParkingGarage/db/migrate/20181104172403_create_parking_spaces.rb",
 		"/Users/Eric/Github_master/ParkingGarage/app/controllers/application_controller.rb",
 		"/Users/Eric/Github_master/ParkingGarage/app/models/parking_space.rb",
@@ -165,14 +150,11 @@
 		"/Users/Eric/Github_master/algorithms/week3.rb",
 		"/Users/Eric/Github_master/algorithms/week3b.rb",
 		"/Users/Eric/Github_master/algorithms/week3c.rb",
-		"/Users/Eric/Github_master/algorithms/binary_tree.rb",
 		"/Users/Eric/Github_master/algorithms/scrap.c",
 		"/Users/Eric/Github_master/algorithms/countpaths.rb",
 		"/Users/Eric/Github_master/algorithms/binary_search_trees.rb",
 		"/Users/Eric/Github_master/algorithms/recursion2.rb",
-		"/Users/Eric/Github_master/algorithms/find_all_arrangements.rb",
 		"/Users/Eric/Github_master/algorithms/scrap.java",
-		"/Users/Eric/Github_master/algorithms/subsets.rb",
 		"/Users/Eric/Github_master/algorithms/week_2a_test.rb",
 		"/Users/Eric/Github_master/algorithms/palindrome.rb",
 		"/Users/Eric/Github_master/algorithms/week_2_test.rb",
@@ -185,7 +167,6 @@
 		"/Users/Eric/Github_master/algorithms/recursion.rb",
 		"/Users/Eric/Github_master/algorithms/tests.rb",
 		"/Users/Eric/Github_master/algorithms/top_k.rb",
-		"/Users/Eric/Github_master/algorithms/three_sum.rb",
 		"/Users/Eric/random_notes.txt",
 		"/Users/Eric/Github_master/algorithms/merge_k_arrays.rb",
 		"/Users/Eric/Github_master/algorithms/extract_info.txt",
@@ -251,10 +232,7 @@
 		"/Users/Eric/Github_master/doximity/dox-blog/db/seeds.rb",
 		"/Users/Eric/Github_master/doximity/dox-blog/db/data/articles.csv",
 		"/Users/Eric/Library/Application Support/RimWorld/Saves/Smalltown-by-the-cave.rws",
-		"/Users/Eric/Github_master/stack-server/stack-server.rb",
-		"/Users/Eric/Github_master/stack-server/stack.rb",
-		"/Users/Eric/Github_master/stack-server/stack_server_original.rb",
-		"/Users/Eric/Github_master/stack-server/stack-test.rb"
+		"/Users/Eric/Github_master/stack-server/stack-server.rb"
 	],
 	"find":
 	{
@@ -343,71 +321,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1864,
-								1864
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Where did Plato get his information of Atlantis fr",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1747,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1747,
-								1747
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Everything you said is pure nonsense. First - this",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -428,18 +343,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.434265221914,
 			1.0
 		],
 		"rows":
