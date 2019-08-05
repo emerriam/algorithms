@@ -1,24 +1,27 @@
 require 'byebug'
 
-def name_match(nomen, candidate)
-	score = 0
-	nomen_arr = nomen.chars
-	candidate_arr = candidate.chars
+def name_match_main(candidate_a, candidate_b)
 
-	nomen_arr.each_with_index do |letter, index|
-		if letter && letter == candidate_arr[index]
-			score = score + 1
-		end
+	print "\nmatch is #{letter_match(candidate_a, candidate_b, 0)}\n"
+end
+
+
+def letter_match(candidate_a, candidate_b, i)
+
+	return true if i == candidate_a.length
+	j = i
+
+	if candidate_a[j] == candidate_b[j]
+		letter_match(candidate_a, candidate_b, j+1)
+	else
+		return false
 	end
-	longest = [nomen.length,candidate.length].max
-	rating = score.to_f / longest.to_f * 100.00
-	print "\nMatches #{rating}%\n"
 end
 
 # known_aliases = ['Alphonse Gabriel Capone', 'Al Capone']
 print "BEGIN OUTPUT\n"
 
-name_match("roger", "roberto")
+name_match_main("rogers", "rogers")
 
 
 # print "Alexsander".similarity("Aleksander")
