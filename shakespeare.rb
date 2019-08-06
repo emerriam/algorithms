@@ -9,7 +9,7 @@ def count_word(target, in_file)
   file = File.open(in_file, "r")
 
   file.each_line do |line|
-    line.split.each do |word|
+    line.split(/\W/i).each do |word|
       word_count += count_word_assistant(target, word, 0)
     end
     
@@ -18,16 +18,17 @@ def count_word(target, in_file)
 end
 
 def count_word_assistant(target_word, word, counter)
-  return 1 if counter == word.length
+  return 1 if counter == word.length + 1
   i = counter
   if target_word[i] == word[i]
     count_word_assistant(target_word, word, counter + 1)
   else
-    0
+    return 0
   end
 
 end
-print "\nShakespeare occurs #{count_word('Shakespeare', 'input_shakespeare.txt')} times.\n}"
+
+print "\nShakespeare occurs #{count_word('Shakespeare', 'input_shakespeare.txt')} times.\n"
 
 
 
