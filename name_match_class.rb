@@ -1,15 +1,50 @@
 require 'byebug'
 
+class NameQuery
 
+  def initialize(query)
+  	query_array = query.split(" ")
+  	@first = query_array[0]
+
+  	if query_array.length == 2
+  		@middle = nil
+  		@last = query_array[1]
+  	elsif query_array.length == 3
+	    @middle = query_array[1]
+	    @last = query_array[2]
+	  end
+  end
+
+  def to_array
+  	return [@first, @middle, @last]
+  end
+
+  def first_middle_last
+  	return "#{@first} #{@middle} #{@last}"
+  end
+
+  def first_last
+  	return "#{@first} #{@last}"
+  end
+
+end
 
 def name_match_main(known_aliases, candidate)
-	return known_aliases.any?{|e| e =~ /\b#{candidate}\b/i}
+	alias_array = []
+	known_aliases.each do |_alias|
+		alias_array.push NameQuery.new(_alias)
+	end
 
-
+	alias_array.each do |_alias|
+		return true if letter_match(_alias.first_middle_last, candidate, 0)
+		return true if letter_match(_alias.first_last, candidate, 0)
+	end
+	return false
 end
 
 
 def letter_match(candidate_a, candidate_b, i)
+
 	return true if i == candidate_a.length
 	j = i
 
@@ -19,14 +54,20 @@ def letter_match(candidate_a, candidate_b, i)
 		false
 	end
 end
-
-known_aliases = ['Alphonse Gabriel Capone']
-
 print "BEGIN OUTPUT\n"
-print name_match_main(known_aliases, 'Alphonse Capone')
+# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Alphonse Capone')
+# print "\n"
+# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Al Capone')
+# print "\n"
+# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Alphonse Francis Capone')
+# print "\n"
+
+print name_match_main(['Alphonse Capone'], 'Alphonse Gabriel Capone')
 print "\n"
-
-
+print name_match_main(['Alphonse Capone'], 'Alphonse Francis Capone')
+print "\n"
+print name_match_main(['Alphonse Capone'], 'Alexander Capone')
+print "\n"
 # Name Matching
 #
 # At Checkr, one of the most important aspects of our work is accurately matching records

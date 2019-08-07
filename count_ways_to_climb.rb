@@ -1,5 +1,4 @@
 require 'byebug'
-FIXNUM_MAX = (2**(0.size * 8 -2) -1)
 
 def countWaysToClimb(steps, n)
 	amount = n

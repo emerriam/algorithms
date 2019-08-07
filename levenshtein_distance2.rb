@@ -5,7 +5,7 @@ def levenshteinDistance(word1, word2)
   return m if n == 0
   return n if m == 0
   d = Array.new(m+1) {Array.new(n+1)}
-debugger
+
   (0..m).each {|i| d[i][0] = i}
   (0..n).each {|j| d[0][j] = j}
   (1..n).each do |j|
@@ -23,9 +23,18 @@ debugger
   d[m][n]
 end
 
+# strWord1 = "cat"
+# strWord2 = "bat"
 
-strWord1 = "bat"
-strWord2 = "cat"
+strWord1 = "dcygbpts"
+strWord2 = "hhebnnxixpm"
 
 res = levenshteinDistance strWord1, strWord2
 print "ANSWER: #{res}\n"
+
+# [
+#   [0, 1, 2, 3], 
+#   [1, nil, nil, nil], 
+#   [2, nil, nil, nil], 
+#   [3, nil, nil, nil]
+# ]
