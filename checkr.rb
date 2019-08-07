@@ -2,29 +2,6 @@ require 'byebug'
 
 
 
-def name_match_main(known_aliases, candidate)
-	return known_aliases.any?{|e| e =~ /\b#{candidate}\b/i}
-end
-
-
-def letter_match(candidate_a, candidate_b, i)
-	return true if i == candidate_a.length
-	j = i
-
-	if candidate_a[j] == candidate_b[j]
-		letter_match(candidate_a, candidate_b, j+1)
-	else
-		false
-	end
-end
-
-known_aliases = ['Alphonse Capone']
-
-print "BEGIN OUTPUT\n"
-print name_match_main(known_aliases, 'Alphonse Capone')
-print "\n"
-
-
 # Name Matching
 #
 # At Checkr, one of the most important aspects of our work is accurately matching records
