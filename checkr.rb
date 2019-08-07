@@ -1,82 +1,30 @@
 require 'byebug'
 
-class String
-	def to_name_query
-		NameQuery.new(self)
-	end
-end
 
-class NameQuery
-
-  def initialize(query)
-  	query_array = query.split(" ")
-  	@first = query_array[0]
-
-  	if query_array.length == 2
-  		@middle = nil
-  		@last = query_array[1]
-  	elsif query_array.length == 3
-	    @middle = query_array[1]
-	    @last = query_array[2]
-	  end
-  end
-
-  def to_array
-  	[@first, @middle, @last]
-  end
-
-  def first_middle_last
-  	"#{@first} #{@middle} #{@last}"
-  end
-
-  def first_last
-  	"#{@first} #{@last}"
-  end
-
-  def matches?(candidate)
-		return true if letter_match(self.first_middle_last, candidate, 0)
-		return true if letter_match(self.first_last, candidate, 0)
-		return false
-  end
-
-  private
-
-	def letter_match(candidate_a, candidate_b, i)
-
-		return true if i == candidate_a.length
-		j = i
-
-		if candidate_a[j] == candidate_b[j]
-			letter_match(candidate_a, candidate_b, j+1)
-		else
-			false
-		end
-	end
-end
 
 def name_match_main(known_aliases, candidate)
-	alias_array = []
-	known_aliases.each do |_alias|
-		name_query = _alias.to_name_query
-		candidate_nq = candidate.to_name_query
-		return name_query.matches?(candidate_nq)
+	return known_aliases.any?{|e| e =~ /\b#{candidate}\b/i}
+end
+
+
+def letter_match(candidate_a, candidate_b, i)
+	return true if i == candidate_a.length
+	j = i
+
+	if candidate_a[j] == candidate_b[j]
+		letter_match(candidate_a, candidate_b, j+1)
+	else
+		false
 	end
 end
 
-print "BEGIN OUTPUT\n"
-# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Alphonse Capone')
-# print "\n"
-# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Al Capone')
-# print "\n"
-# print name_match_main(['Alphonse Gabriel Capone', 'Alexander Capone', 'Al Capone'], 'Alphonse Francis Capone')
-# print "\n"
+known_aliases = ['Alphonse Capone']
 
-print name_match_main(['Alphonse Capone'], 'Alphonse Gabriel Capone')
+print "BEGIN OUTPUT\n"
+print name_match_main(known_aliases, 'Alphonse Capone')
 print "\n"
-print name_match_main(['Alphonse Capone'], 'Alphonse Francis Capone')
-print "\n"
-print name_match_main(['Alphonse Capone'], 'Alexander Capone')
-print "\n"
+
+
 # Name Matching
 #
 # At Checkr, one of the most important aspects of our work is accurately matching records
