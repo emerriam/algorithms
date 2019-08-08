@@ -5,6 +5,17 @@ Address questions to
 Melissa Lau mlau@checkr.com
 mlau@checker.com
 
+def name_match(aliases, target)
+	return true if aliases.include?(target)
+
+	aliases.each do |a|
+		a = a.split(' ')
+		return true if !!target.match(/#{a[0]} #{a[2]}/)
+		return true if !!target.match(/#{a[0]} #{ a[1][1].upcase } #{a[2]}/)
+	end
+
+	false
+end
 # Name Matching
 #
 # At Checkr, one of the most important aspects of our work is accurately matching records
