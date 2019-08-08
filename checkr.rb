@@ -1,14 +1,12 @@
 Checkr INTERVIEW 
 Checkr question
 Checkr challenge
-Address questions to
 Melissa Lau mlau@checkr.com
 mlau@checker.com
 
 # Checkr INTERVIEW 
 # Checkr question
 # Checkr challenge
-# Address questions to
 # Melissa Lau mlau@checkr.com
 # mlau@checker.com
 
