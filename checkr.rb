@@ -4,6 +4,7 @@ Checkr challenge
 Melissa Lau mlau@checkr.com
 mlau@checker.com
 
+https://www.glassdoor.com/Interview/Checkr-Interview-Questions-E985716.htm
 # Checkr INTERVIEW 
 # Checkr question
 # Checkr challenge
