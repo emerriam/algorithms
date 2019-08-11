@@ -8,9 +8,6 @@ mlau@checker.com
 # Checkr INTERVIEW 
 # Checkr question
 # Checkr challenge
-# Address questions to
-# Melissa Lau mlau@checkr.com
-# mlau@checker.com
 
 def name_match(aliases, target)
 	return true if aliases.include?(target)
