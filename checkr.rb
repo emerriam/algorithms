@@ -1,13 +1,18 @@
-Checkr INTERVIEW 
+Checkr INTERVIEW phone screen coding 
 Checkr question
 Checkr challenge
-Address questions to
 Melissa Lau mlau@checkr.com
 mlau@checker.com
 
+https://www.glassdoor.com/Interview/Checkr-Interview-Questions-E985716.htm
 # Checkr INTERVIEW 
 # Checkr question
 # Checkr challenge
+<<<<<<< HEAD
+=======
+# Melissa Lau mlau@checkr.com
+# mlau@checker.com
+>>>>>>> 963fe54bc48ef48405e2daf92b9cd5302b63772a
 
 def name_match(aliases, target)
 	return true if aliases.include?(target)
