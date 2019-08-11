@@ -5,7 +5,6 @@ def name_match(aliases, target)
 	aliases.each do |a|
 		a = a.split(' ')
 		return true if !!target.match(/#{a[0]} #{a[2]}/) # keep
-		return true if !!target.match(/#{a[0]} #{a[1]} #{a[2]}/) # keep
 		return true if !!target.match(/#{a[0]} #{a[1][0]} #{a[2]}/) # keep
 		return true if !!target.match(/#{a[0]} #{a[1]}.* #{a[2]}/) # keep
 	end
