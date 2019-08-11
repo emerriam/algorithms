@@ -10,14 +10,6 @@ def name_match(aliases, target)
 
 	false
 end
-# Name Matching
-#
-# At Checkr, one of the most important aspects of our work is accurately matching records
-# to candidates. One of the ways that we do this is by comparing the name on a given record
-# to a list of known aliases for the candidate. In this exercise, we will implement a
-# `name_match` method that accepts the list of known aliases as well as the name returned
-# on a record. It should return True if the name matches any of the aliases and False otherwise.
-#
 # The name_match method will be required to pass the following tests:
 #
 # 1. Exact match
