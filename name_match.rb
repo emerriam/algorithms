@@ -1,4 +1,4 @@
-require 'byebug'
+
 def name_match(aliases, target)
 	return true if aliases.include?(target)
 
