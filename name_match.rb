@@ -7,13 +7,15 @@ def name_match(aliases, target)
 		return true if !!target.match(/#{a[0]} #{a[2]}/)
 		return true if !!target.match(/#{a[0]} #{a[1][0]} #{a[2]}/)
 		return true if !!target.match(/#{a[0]} #{a[1]}.* #{a[2]}/)
+		return true if !!target.match(/#{a[1]} #{a[2]}/)
+		return true if !!target.match(/#{a[1]} #{a[0][0]} #{a[2]}/)
 	end
 	false
 end
 
 # The name_match method will be required to pass the following tests:
 #
-# 1. Exact match
+# # 1. Exact match
 
 known_aliases = ['Alphonse Gabriel Capone', 'Al Capone']
 print "\n"
@@ -24,7 +26,7 @@ print "\n"
 print name_match(known_aliases, 'Alphonse Francis Capone') # => False
 print "\n-----"
 
-#
+# #
 # 2. Middle name missing (on alias)
 
 known_aliases = ['Alphonse Capone']
@@ -74,7 +76,7 @@ print name_match(known_aliases, 'Alphonse E Capone')  # => False
 print "\n"
 print name_match(known_aliases, 'Alphonse Edward Capone') #  => False
 print "\n"
-print name_match(known_aliases, 'Alphonse Gregory Capone')  # => False
+print name_match(known_aliases, 'Alphonse Gregory Capone')  # => Falsed
 print "\n"
 
 #
@@ -92,11 +94,18 @@ print "\n"
 #
 # 'Gabriel Alphonse Capone' is a valid transposition of 'Alphonse Gabriel Capone'
 #
-# known_aliases = ['Alphonse Gabriel Capone']
-# name_match(known_aliases, 'Gabriel Alphonse Capone') => True
-# name_match(known_aliases, 'Gabriel A Capone') => True
-# name_match(known_aliases, 'Gabriel Capone') => True
-# name_match(known_aliases, 'Gabriel Francis Capone') => False
+known_aliases = ['Alphonse Gabriel Capone']
+print "\n"
+print name_match(known_aliases, 'Gabriel Alphonse Capone') #=> True
+print "\n"
+print name_match(known_aliases, 'Gabriel A Capone') #=> True
+print "\n"
+print name_match(known_aliases, 'Gabriel Capone') #=> True
+print "\n"
+print name_match(known_aliases, 'Gabriel Francis Capone') #=> False
+print "\n"
+
+
 #
 #
 # 7. Last name cannot be transposed
