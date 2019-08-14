@@ -113,10 +113,14 @@ print "\n"
 # 'Alphonse Capone Gabriel' is NOT a valid transposition of 'Alphonse Gabriel Capone'
 # 'Capone Alphonse Gabriel' is NOT a valid transposition of 'Alphonse Gabriel Capone'
 #
-# known_aliases = ['Alphonse Gabriel Capone']
-# name_match(known_aliases, 'Alphonse Capone Gabriel') => False
-# name_match(known_aliases, 'Capone Alphonse Gabriel') => False
-# name_match(known_aliases, 'Capone Gabriel') => False  
+known_aliases = ['Alphonse Gabriel Capone']
+print "-----\n"
+print name_match(known_aliases, 'Alphonse Capone Gabriel') # => False
+print "\n"
+print name_match(known_aliases, 'Capone Alphonse Gabriel') # => False
+print "\n"
+print name_match(known_aliases, 'Capone Gabriel') # => False  
+print "\n"
 
 
 
