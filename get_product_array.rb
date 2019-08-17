@@ -8,7 +8,7 @@ require 'byebug'
 def getProductArray(numbers)
 	n = numbers[0]
 	numbers = numbers[1,n]
-
+	output = ''
 	products = Array.new(n) { |i| i = 1 }
 
 	(0...n).each do |i|
@@ -18,9 +18,21 @@ def getProductArray(numbers)
 			end
 		end
 	end
-	products
+
+	products.each do |p|
+		output << "#{p}\n"
+	end
+	return output
 end
 
-print getProductArray([2,5,1000])
-# print "\n Answer is:  #{getProductArray([5,1,2,3,4,5])} \n"
+# print getProductArray([2,5,1000])
+print "\n#{getProductArray([3,4,9,10])}\n"
 
+
+# nums_count = gets.strip.to_i
+# nums = Array.new(nums_count)
+# nums_count.times do |i|
+#     nums_item = gets.strip.to_i
+#     nums[i] = nums_item
+# end
+# res = getProductArray nums
