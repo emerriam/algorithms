@@ -10,24 +10,26 @@
 
 # Input: "ABAB"
 # Output: "ABAB" [We are not concerned about characters repeating in groups]
-require 'byebug'
 def RLE(strInput)
-	return RLE_helper(strInput, 0, 0)
+	return RLE_helper(strInput, 0, 0, output = '')
 end
 
+def RLE_helper(strInput, _index, _count, output)
+	return output if _index == strInput.length
 
-def RLE_helper(strInput, _index, _count)
-	if _index == strInput.length
-		return "#{strInput[_index]}#{_count}"
-	end
-
-	if strInput[_index] == strInput[_index - 1]
-		RLE_helper(strInput, _index + 1, _count + 1)
-	else
-		RLE_helper(strInput, _index, 0)
+	if strInput[_index + 1] == strInput[_index]
+		RLE_helper(strInput, _index + 1, _count + 1, output)
+	else 
+		if _count > 0 
+			output << "#{_count + 1}"
+			output << strInput[_index]
+		else
+			output << strInput[_index]
+		end
+		RLE_helper(strInput, _index + 1, 0, output)
 	end
 
 end
 
-print "\n#{RLE("AAAAA")}\n"
+print "\n#{RLE("ABAB")}\n"
 # 5A
