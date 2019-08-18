@@ -7,21 +7,25 @@
 # Any string in returned list must not contain '?' character 
 # i.e. you have to replace all '?' with either '0' or '1'.
 
-possible_chars = [0,1]
+
 def find_all_possibilities(input_string)
-	find_all_possibilities_helper(input_string, 0, [])
+	helper_array = []
+	find_all_possibilities_helper(input_string, 0, 0, [], helper_array)
 end
 
-def find_all_possibilities_helper(input_string, index_, result_array)
-	return result_array if index_ == input_string.size
-
-	if input_string[index_] == '?'
-		possible_chars.each_with_index do |char, i|
-			# find_all_possibilities_helper(input_string, index_ + 1, result_array)
-		end
-	elsif input_stirng
-		find_all_possibilities_helper(input_string, index_ + 1, result_array)
+def find_all_possibilities_helper(input_string, i, j, result_array, helper_array)
+	possible_chars = [0,1]
+	if i == input_string.size
+		return result_array
 	end
+
+	if input_string[i] == '?'
+
+	else
+		find_all_possibilities_helper(input_string, i + 1, j, result_array, helper_array)
+	end
+
+
 end
 
 s = “1?10”
