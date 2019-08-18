@@ -4,6 +4,7 @@
 # empty set is always a subset of any set.
 # whole set s should also be considered as its subset here.
 
+require 'byebug'
 def generate_all_subsets(input_array)
 	if !input_array || input_array.nil? || input_array.empty?
 		return false
@@ -25,9 +26,15 @@ def printSubsets(input_array, i, ssf, j, output)
 	printSubsets(input_array, i+1, ssf, j, output)
 	ssf[j] = input_array[i]
 	printSubsets(input_array, i+1, ssf, j+1, output)
-
 	return output
 end
 
+
 print "\n#{generate_all_subsets("xy")}\n"
 # ["", "x", "y", "xy"]
+
+
+
+
+
+
