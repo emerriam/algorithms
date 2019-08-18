@@ -15,7 +15,11 @@ def RLE(strInput)
 end
 
 def RLE_helper(strInput, _index, _count, output)
-	return output if _index == strInput.length
+	if _index == strInput.length  
+		return output 
+	end
+
+
 
 	if strInput[_index + 1] == strInput[_index]
 		RLE_helper(strInput, _index + 1, _count + 1, output)

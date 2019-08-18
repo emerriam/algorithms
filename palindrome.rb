@@ -52,13 +52,13 @@ def seek_palindrome(arr, left, right, midpoint, i)
 	if left <= 0 || right >= arr.size
 		return 0
 	end
-	print "midpoint is #{midpoint}\n"
+
 	left_array = arr[midpoint..right]
 	right_array = arr[left..(midpoint - i)]
 
 	# debugger
 
-	if is_match(right_array, left_array)
+	if !!is_match(right_array, left_array)
 		return 1
 	end
 
@@ -68,12 +68,11 @@ def seek_palindrome(arr, left, right, midpoint, i)
 end
 
 def is_match(left_array, right_array)
-	print "comparing #{left_array} and #{right_array}\n"
 	 left_array.sort == right_array.sort ?  1 :  0
 end
 
 s = 'aaba'
-generate_palindromic_decompositions(s)
+print "\n#{generate_palindromic_decompositions(s)}\n"
 
 
 # xyx
