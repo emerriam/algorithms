@@ -11,19 +11,6 @@ def countPaths(arr, y, x)
 	n = arr.length
 	m = arr[0].length
 
-
- #  if ( x > n-1 || y > m-1)
- #     return 0
- #  end
-	# if ( arr[x][y] == '*')
-	# 	return 1
-	# end
-	# if (x == n-1 && y == m-1) 
-	# 	return 1
-	# end
-	# print "x:#{x}  y:#{y}\n"
-	# return (countPaths(arr, x+1, y) + countPaths(arr, x, y+1))
-
 	if x >= arr.length + 1
 		return 0
 	end

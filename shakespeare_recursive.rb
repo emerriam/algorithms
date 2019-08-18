@@ -1,10 +1,24 @@
 require 'byebug'
 
 # Count the number of times the worde Shakespear occurs in a file.
-the_file='input.txt'
-h = Hash.new
-f = File.open(the_file, "r")
 
+
+the_file='input_shakespeare.txt'
+
+index_hash = Hash.new
+file = File.read(the_file).chomp.split
+
+file.each do |word|
+	if index_hash[word] == nil
+		# CReate a new hash entry
+		index_hash[word] = 1
+	else
+		# Update an existing entry
+		index_hash[word] = index_hash[word] + 1
+	end
+end
+
+# Lookup the word in the hash list and return result
 
 # f.each_line { |line|
 
@@ -23,11 +37,11 @@ f = File.open(the_file, "r")
 #   }
 # }
 
-output = h.sort_by {|_key, value| value}.reverse
+# output = h.sort_by {|_key, value| value}.reverse
 
-print output[0, 9]
-
-print "\nShakespeare occurs #{h['SHAKESPEARE']} times.\n}"
+# print output[0, 9]
+debugger
+print "\nShakespeare occurs #{h['SHAKESPEARE']} times.\n"
 x = 3
 
 
