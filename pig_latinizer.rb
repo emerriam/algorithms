@@ -77,11 +77,9 @@ def find_upcase(input_string)
       return_vals.push(i)
       input_string[i].downcase
     end
-  
     i = i + 1
   end
   return return_vals
-
 end
 
 
