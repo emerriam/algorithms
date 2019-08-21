@@ -34,22 +34,17 @@ def find_words(characters, words)
 			else
 				difference = i - word_index
 			end
-
  			word = characters[word_index, difference]
-
- 			word_index = i + 1
  			if pointer_hash.key?(word)
-
  				pointer_hash[word].push(word_index)
  			else
  				pointer_hash[word] = [word_index]
  			end
+ 			word_index = i + 1
 		end
 		i = i  + 1
 	end
-
 	# lookup the words in the hash
-
 	words.each do |w|
 		if pointer_hash.key?(w)
 			output_array.push(pointer_hash[w])
@@ -57,10 +52,7 @@ def find_words(characters, words)
 			output_array.push([-1])
 		end
 	end
-
 	return output_array
-
-
 end
 
 
