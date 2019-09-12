@@ -1,8 +1,6 @@
 def find_integer(arr)
-
 	arr_length = arr.shift
 	arr.sort!
-
 	arr.each do |val|
 		return find_integer_in_array(arr, val)
 	end
