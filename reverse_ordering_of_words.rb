@@ -7,13 +7,10 @@ def reverse_ordering_of_words(s)
 	j = split_words.length
 
 	(0..split_words.length).each do |i|
-		output[i] = split_words[j]
+		if output[i] != nil
+			output[i] = split_words[j]
+		end
 		j = j - 1
-	end
-
-	if output[0] == nil 
-
-	    output.shift
 	end
 
 	returnval = output.join(' ')
