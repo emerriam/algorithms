@@ -1,7 +1,6 @@
 # @param {Integer} x
 # @return {Integer}
 def reverse(x)
-    orig = x
     output = x.to_s.split('').reverse!.join.to_i
     
     if orig < 0 
