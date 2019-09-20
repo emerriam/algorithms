@@ -6,18 +6,19 @@ require 'byebug'
 def find_max_average(nums, k)
 	return nums.sort.last if k == 1
 	return nums.inject(0){|sum,x| sum + x }.to_f / k if k == nums.size
-
-	highest = nums[0,k].inject(0){|sum,x| sum + x }
+	tmp_array = []
+	tmp_array.push nums[0,k].inject(0){|sum,x| sum + x }
 
 	i = 1
 	while i <= nums.size
 		if nums[i+(k-1)] != nil
 			subarray = nums[i,k]
-			avg = subarray.inject(0){|sum,x| sum + x }
-			avg > highest ? highest = avg : highest
+			tmp_array.push subarray.inject(0){|sum,x| sum + x }
+			# avg > highest ? highest = avg : highest
 		end
 		i = i + 1
 	end
+	highest = tmp_array.sort.last
 	return highest / k.to_f
 end
 
