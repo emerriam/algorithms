@@ -18,18 +18,17 @@ def to_goat_latin(s)
 		output.push(word)
 	end
 	return output.join(' ').to_s
-
 end
 
 def word_to_goat_latin(word)
-    vowels = ["a","e","i","o","u", "A", "E", "I", "O", "U"]
-    if vowels.include?(word[0])
-        word = word + "ma"
-    else
-    	word = word + word[0] + "ma"
-    	word[0] = ''
-    end
-    return word
+  vowels = ["a","e","i","o","u", "A", "E", "I", "O", "U"]
+  if vowels.include?(word[0])
+      word = word + "ma"
+  else
+  	word = word + word[0] + "ma"
+  	word[0] = ''
+  end
+  return word
 end
 
 puts to_goat_latin("I speak Goat Latin")
