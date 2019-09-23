@@ -12,11 +12,14 @@ def single_number(nums)
     	end
     	i = i + 1
     end
+		
 		store_hash.each do |key, value|
 			if value == 1
 				return key
 			end
 		end
+
+
 end
 
 
@@ -26,4 +29,4 @@ end
 # Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
 
-puts "\n#{single_number([4,1,2,1,2])}\n" # 1
+puts "\n#{single_number([2,2,1])}\n" # 1
