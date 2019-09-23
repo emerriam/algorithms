@@ -12,16 +12,11 @@ def find_duplicates(nums)
     output_array = []
     while i < nums.length
     	if store_hash[nums[i]] != nil
-    		store_hash[nums[i]] = store_hash[nums[i]] + 1
+    		output_array.push(nums[i])
     	else
     		store_hash[nums[i]] = 1
     	end
     	i = i + 1
-    end
-    store_hash.each do |key, value|
-    	if value > 1
-    		output_array.push(key)
-    	end
     end
     return output_array.sort
 
