@@ -62,7 +62,7 @@ def parse_domain(domain, store_hash)
     rightmost = addr_array.pop
 
     if last_rightmost != ''
-      rightmost = last_rightmost + "." + rightmost
+      rightmost = rightmost + "." + last_rightmost
     end
 
     if store_hash[rightmost] == nil
