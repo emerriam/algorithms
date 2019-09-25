@@ -47,41 +47,31 @@ def calculateClicksByDomain(counts)
     parse_domain(counts[i], store_hash)
     i = i + 1
   end
-
+  puts store_hash
 end
 
-private 
-
-def parse_domain(domain_name, store_hash)
-  
-  hit_count = domain_name.split(',')[0].to_i
-
-  domain_array = domain_name.split(".")
-  domain_array[0] = domain_array[0].split(',')[1]
+def parse_domain(domain, store_hash)
+  count = domain.split(',')[0].to_i
+  addr = domain.split(',')[1]
+  addr_array = addr.split('.')
 
   last_rightmost = ''
-  rightmost = domain_array.last
-
-  while domain_array.size > 0
+  rightmost = ''
+  while addr_array.size > 0 
     last_rightmost = rightmost
-    rightmost = domain_array.pop
-    j = 0
-    while j < domain_array.size 
+    rightmost = addr_array.pop
 
-      rightmost = combine_dn(domain_array[j], last_rightmost)
-      if store_hash[rightmost] != nil
-        store_hash[rightmost] = store_hash[rightmost] + hit_count
-      else
-        store_hash[rightmost] = hit_count.to_i
-      end
-      j = j + 1
+    if last_rightmost != ''
+      rightmost = last_rightmost + "." + rightmost
     end
-  end
-  return store_hash
-end
 
-def combine_dn(rightmost, last_rightmost) 
-  return [rightmost, last_rightmost].join('.')
+    if store_hash[rightmost] == nil
+      store_hash[rightmost] = count
+    else
+      store_hash[rightmost] = store_hash[rightmost] + count
+    end
+
+  end
 end
 
 counts = [ "900,google.com",
@@ -97,3 +87,48 @@ counts = [ "900,google.com",
     "1,google.co.uk" ]
 
 calculateClicksByDomain(counts)
+
+
+# def calculateClicksByDomain(counts)
+#   store_hash = {}
+#   i = 0
+#   while i < counts.size
+#     parse_domain(counts[i], store_hash)
+#     i = i + 1
+#   end
+
+# end
+
+# private 
+
+# def parse_domain(domain_name, store_hash)
+  
+#   hit_count = domain_name.split(',')[0].to_i
+
+#   domain_array = domain_name.split(".")
+#   domain_array[0] = domain_array[0].split(',')[1]
+
+#   last_rightmost = ''
+#   rightmost = domain_array.last
+
+#   while domain_array.size > 0
+#     last_rightmost = rightmost
+#     rightmost = domain_array.pop
+#     j = 0
+#     while j < domain_array.size 
+
+#       rightmost = combine_dn(domain_array[j], last_rightmost)
+#       if store_hash[rightmost] != nil
+#         store_hash[rightmost] = store_hash[rightmost] + hit_count
+#       else
+#         store_hash[rightmost] = hit_count.to_i
+#       end
+#       j = j + 1
+#     end
+#   end
+#   return store_hash
+# end
+
+# def combine_dn(rightmost, last_rightmost) 
+#   return [rightmost, last_rightmost].join('.')
+# end
