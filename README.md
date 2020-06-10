@@ -35,7 +35,7 @@ customers GET    /customers(.:format)     customers#index
 ```
 post customers_url, params: { customer: [Customer] }, as: :json
 ```
-Responds with a JSON of the customer just created with all nested attributes.
+Creates customer and responds with a JSON of the customer just created with all nested attributes.
 ```
 {"id"=>298486375,
  "name"=>"Eric",
@@ -149,8 +149,43 @@ Responds with single customer, including all nested attributes.
 ```
 delete customer_url([Customer.id]), as: :json
 ```
-Responds with empty string and status code 204
+Deletes Customer and responds with empty string and status code 204
 
+## customer#update
+```
+patch customer_url([Customer.id]), params: { customer: [Customer] }, as: :json
+```
+Modifies objects that are different than the same objects already saved.  Responds with the updated Customer and all nested attributes and status :accepted.
+```
+{"id"=>298486375,
+ "name"=>"Eric",
+ "address"=>"905 Bounty Drive unit 109",
+ "city"=>"Foster City",
+ "state"=>"California",
+ "country"=>"USA",
+ "phone"=>"617-658-5515",
+ "email"=>"eric@email.com",
+ "vehicles"=>
+  [{"id"=>1,
+    "make"=>"Ford",
+    "model"=>"Explorer",
+    "year"=>"2018",
+    "color"=>"Gray",
+    "vin"=>"882vim",
+    "customer_id"=>298486375,
+    "reservations"=>
+     [{"id"=>980190963,
+       "time"=>"2020-06-10T17:29:58.428Z",
+       "end"=>"2020-06-10T18:29:58.428Z"}]},
+   {"id"=>2,
+    "make"=>"Volkswagen",
+    "model"=>"Jetta",
+    "year"=>"2019",
+    "color"=>"Gray",
+    "vin"=>"323dds",
+    "customer_id"=>298486375,
+    "reservations"=>[]}]}
+```
 ## Example/Test JSON
 ```
 [
