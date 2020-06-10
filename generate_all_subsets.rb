@@ -30,7 +30,7 @@ def printSubsets(input_array, i, ssf, j, output)
 end
 
 
-print "\n#{generate_all_subsets("xy")}\n"
+print "\n#{generate_all_subsets("eric merriam")}\n"
 # ["", "x", "y", "xy"]
 
 
