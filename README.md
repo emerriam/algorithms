@@ -9,8 +9,8 @@ The API uses nested attributes in Rails to allow the capture of Customer, Vehicl
 ## Nested Relationships
 
 - Customers
-	-- Vehicles
-		--- Reservations
+-- Vehicles
+--- Reservations
 
 ## Database initialization
 ```
