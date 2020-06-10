@@ -5,6 +5,7 @@
 BizzyDemo is very basic API that can be used to manage multiple Customers, Vehicles, and Reservations.
 It consists of a single controller (customers_controller), models for each object type, and some basic tests.
 The API uses nested attributes in Rails to allow the capture of Customer, Vehicle, and Reservation in a single step.
+Booking management is minimal.  When a reservation is created, existing reservations are compared.  If the new reservation has a start time within the duration of an existing reservation, it is not accepted by the controller.
 
 ## Database initialization
 ```
