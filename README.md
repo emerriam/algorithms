@@ -149,7 +149,7 @@ Responds with single customer, including all nested attributes.
 ```
 delete customer_url([Customer.id]), as: :json
 ```
-Deletes Customer and responds with empty string and status code 204
+Deletes Customer and responds with empty string and status :ok
 
 ### customer#update
 ```
@@ -186,6 +186,56 @@ Modifies objects that are different than the same objects already saved.  Respon
     "customer_id"=>298486375,
     "reservations"=>[]}]}
 ```
+### Destroy a nested object
+```
+test_json = 
+{
+  id: Customer.first.id,
+  vehicles_attributes: [
+    {
+      id: Customer.first.vehicles.first.id,
+      reservations_attributes: [
+        {
+          id: Customer.first.vehicles.first.reservations.first.id,
+          _destroy: 1
+        }
+      ]
+    }
+  ]
+}
+```
+```
+patch customer_url([Customer.id]), params: { customer: test_json }, as: :json
+```
+Responds with the complete Customer object with specified nested attributes destroyed.
+```
+{"id"=>298486375,
+ "name"=>"Eric",
+ "address"=>"905 Bounty Drive unit 109",
+ "city"=>"Foster City",
+ "state"=>"California",
+ "country"=>"USA",
+ "phone"=>"617-658-5515",
+ "email"=>"eric@email.com",
+ "vehicles"=>
+  [{"id"=>1,
+    "make"=>"Ford",
+    "model"=>"Escape",
+    "year"=>"2018",
+    "color"=>"Gray",
+    "vin"=>"882vim",
+    "customer_id"=>298486375,
+    "reservations"=>[]},
+   {"id"=>2,
+    "make"=>"Volkswagen",
+    "model"=>"Jetta",
+    "year"=>"2019",
+    "color"=>"Gray",
+    "vin"=>"323dds",
+    "customer_id"=>298486375,
+    "reservations"=>[]}]}
+```
+
 ## Example/Test JSON
 ```
 [
