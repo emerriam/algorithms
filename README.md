@@ -208,7 +208,7 @@ test_json =
 ```
 patch customer_url([Customer.id]), params: { customer: test_json }, as: :json
 ```
-Responds with the complete Customer object with specified nested attributes destroyed.
+Destroys object with _destroy_ tag and responds with the complete Customer object with specified nested attributes destroyed.
 ```
 {"id"=>298486375,
  "name"=>"Eric",
