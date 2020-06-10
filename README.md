@@ -191,13 +191,13 @@ Modifies objects that are different than the same objects already saved.  Respon
 ```
 test_json = 
 {
-  id: Customer.first.id,
+  id: [Customer.id]
   vehicles_attributes: [
     {
-      id: Customer.first.vehicles.first.id,
+      id: [Vehicle.id],
       reservations_attributes: [
         {
-          id: Customer.first.vehicles.first.reservations.first.id,
+          id: [Reservation.id],
           _destroy: 1
         }
       ]
