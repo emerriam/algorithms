@@ -1,27 +1,27 @@
 # README
 
-* Description
+## Description
 
 BizzyDemo is very basic API that can be used to manage multiple Customers, Vehicles, and Reservations.
 It consists of a single controller (customers_controller), models for each object type, and some basic tests.
 The API uses nested attributes in Rails to allow the capture of Customer, Vehicle, and Reservation in a single step.
 
-* Nested Relationships
+## Nested Relationships
 
 - Customers
  	- Vehicles
   	- Reservations
 
-* Database initialization
-
+## Database initialization
+```
 rake db:migrate
-
-* How to run the test suite
-
+```
+## How to run the test suite
+```
 rails test test/controllers/customers_controller_test.rb
-
-* Example/Test JSON
-
+```
+## Example/Test JSON
+```
 [
   {
     name: 'Eric',
@@ -64,3 +64,4 @@ rails test test/controllers/customers_controller_test.rb
     email: 'mary@email.com'
   }
 ]
+```
