@@ -145,13 +145,13 @@ Responds with single customer, including all nested attributes.
     "customer_id"=>298486375,
     "reservations"=>[]}]}
 ```
-## customer#destroy
+### customer#destroy
 ```
 delete customer_url([Customer.id]), as: :json
 ```
 Deletes Customer and responds with empty string and status code 204
 
-## customer#update
+### customer#update
 ```
 patch customer_url([Customer.id]), params: { customer: [Customer] }, as: :json
 ```
